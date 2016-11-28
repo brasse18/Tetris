@@ -27,3 +27,6 @@ klass för spelaren/spelarna
 spara/ladda spelaren/spelarnas score
 
 klass för menyn
+
+
+![alt tag](https://github.com/brasse18/Tetris/blob/master/Tetris.jpg)
