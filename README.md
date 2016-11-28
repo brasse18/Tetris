@@ -1,6 +1,6 @@
 # Tetris
 
-laddar in spelare och scoreboard vi start \n
+laddar in spelare och scoreboard vi start
 om det inte finns så får man mata in en ny spelare
 sen så möts man av en meny som ska innehålla inställningar spela och stäng
 på inställningar så ska det finnas val för vilken svårighet men vill köra på och möjlighet att lägga till en spelare och byta spelare
