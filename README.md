@@ -11,9 +11,13 @@ när spelaren är klar spelad så får man en möjlighet att spara sitt spel til
 #Klasser
 
 klasser för varje form
+
 klasser för en kub i formen
+
 klass för spelplanen
+
 klass för spelaren/spelarna
-spara spelaren/spelarnas score
-ladda spelaren/spelarnas score
+
+spara/ladda spelaren/spelarnas score
+
 klass för menyn
