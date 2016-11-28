@@ -8,6 +8,7 @@ på spel så kommer spelet startas och köras i en loop som körs tills det att 
 (normala tetris regler gäller för spelets regler)
 när spelaren är klar spelad så får man en möjlighet att spara sitt spel till score borden som sedan undrar om man vill spara detta till file.
 
+#Klasser
 
 klasser för varje form
 klasser för en kub i formen
