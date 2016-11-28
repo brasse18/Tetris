@@ -15,18 +15,4 @@ på spel så kommer spelet startas och köras i en loop som körs tills det att 
 när spelaren är klar spelad så får man en möjlighet att spara sitt spel till score borden som sedan undrar om man vill spara detta till file.
 
 #Klasser
-
-klasser för varje form
-
-klasser för en kub i formen
-
-klass för spelplanen
-
-klass för spelaren/spelarna
-
-spara/ladda spelaren/spelarnas score
-
-klass för menyn
-
-
 ![alt tag](https://github.com/brasse18/Tetris/blob/master/Tetris.jpg)
