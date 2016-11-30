@@ -1,12 +1,15 @@
-#ifndef CLASS_H
+#ifndef GAME_H
 #include <string>
 
 using namespace std;
 
-class Class
+class Game
 {
 	private:
+	int setings[2];
 	public:
-		Class();
+	Game();
+	void gameRound();
+	void endGame();
 };
 #endif
