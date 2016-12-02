@@ -1,6 +1,8 @@
 #include <iostream> // inport input stream
 #include <SFML/Graphics.hpp>
 #include <string.h>
+#include "include/Box.h"
+#include "include/Game.h"
 
 using namespace sf;
 using namespace std;

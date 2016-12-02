@@ -1,3 +1,12 @@
-#include "Class.h"
+#include "Box.h"
 
-Class::Class(){}
+using namespace sf;
+
+Box::Box()
+{
+    box.setColor(Red);
+    box.setPosition(position);
+}
+
+void Box::move() {
+}
