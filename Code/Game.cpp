@@ -1,25 +1,22 @@
-#include "Game.h"
-#include "include/Box.h"
+#include "include/Game.h"
 
 
-
-void Game::gameRound() {
-
-}
-
-virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const
+Game::Game() 
 {
-    target(box);
-}
-
-void Game::update() {
 
 }
 
-void Game::endGame() {
+Game::~Game() 
+{
 
 }
 
-Game::Game() {
-    mWindow(VideoMode(640,480,32),"Tetris");
+void Game::Update(float dt) 
+{
+
+}
+
+void Game::draw(sf::RenderTarget &target, sf::RenderStates states) const 
+{
+    target.draw(mBox);
 }

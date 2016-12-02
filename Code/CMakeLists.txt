@@ -4,5 +4,5 @@ project(tetris)
 set(EXECUTABLE_NAME "tetris")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -lsfml-system -lsfml-window -lsfml-graphics")
 
-set(SOURCE_FILES main.cpp)
+set(SOURCE_FILES main.cpp Game.cpp Box.cpp)
 add_executable(${EXECUTABLE_NAME} ${SOURCE_FILES})

@@ -1,17 +1,22 @@
 #ifndef BOX_H
+#define BOX_H
 #include <string>
+#include <SFML/Graphics.hpp>
 
 using namespace std;
 using namespace sf;
 
-class Box
+class Box : public Drawable
 {
-	private:
-	int colour;
-	int position[2] = {100,100};
+    private:
+        virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+	    Color colour = Color::Red;
+    int x = 300;
+    int y = 300;
+
 	public:
-    Sprite box;
-	Box();
-	void move();
+	    Box();
+        RectangleShape box;
+	    void move();
 };
-#endif
+#endif //BOX_H
