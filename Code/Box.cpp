@@ -18,5 +18,24 @@ void Box::draw(sf::RenderTarget &target, sf::RenderStates states) const
 
 void Box::move()
 {
-    box.move(0,0.02);
+    if (box.getPosition().y >= 400)
+    {
+
+    } else
+    {
+        box.move(0,0.02);
+    }
+
+}
+
+void Box::move(int nr)
+{
+    if (box.getPosition().x > 100 && box.getPosition().x < 400)
+    {
+
+    } else
+    {
+        box.setPosition(box.getPosition().x + nr,box.getPosition().y);
+    }
+
 }

@@ -20,3 +20,8 @@ void Game::draw(sf::RenderTarget &target, sf::RenderStates states) const
 {
     target.draw(mBox);
 }
+
+void Game::gameRound()
+{
+    mBox.move();
+}

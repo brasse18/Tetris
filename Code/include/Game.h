@@ -14,6 +14,7 @@ class Game : public Drawable
 		~Game();
         Box mBox;
         RectangleShape box;
+    void gameRound();
 		void Update(float dt);
 	private:
 		virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;

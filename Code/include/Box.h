@@ -11,12 +11,13 @@ class Box : public Drawable
     private:
         virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 	    Color colour = Color::Red;
-    int x = 300;
-    int y = 300;
+    int x = 200;
+    int y = 100;
 
 	public:
 	    Box();
         RectangleShape box;
 	    void move();
+    void move(int nr);
 };
 #endif //BOX_H

@@ -8,6 +8,7 @@ using namespace std;
 
 int main() {
     bool isFullscreen = false;
+    bool gameStart = false;
     RenderWindow window(VideoMode(640,480,32),"Tetris");
 
     Game testGame;
@@ -62,9 +63,9 @@ int main() {
                     break;
             }
 
-            if (event.type == Event::Closed) {
-                window.close();
-            }
+            //if (event.type == Event::Closed) {
+            //    window.close();
+            //}
             if (Mouse::isButtonPressed(Mouse::Left)) {
                 Vector2i position = Mouse::getPosition(window);
                 if (position.x > menuStartText.getPosition().x &&
@@ -72,6 +73,7 @@ int main() {
                     if (position.y > menuStartText.getPosition().y &&
                         position.y < menuStartText.getPosition().y + menuStartText.getLocalBounds().height) {
                         cout << "Start" << endl;
+                        gameStart = true;
                     }
                 }
 
@@ -107,14 +109,26 @@ int main() {
                 }
             }
         }
-                testGame.mBox.move();
-                window.clear(Color::Black);
-                window.draw(titleText);
-                window.draw(menuStartText);
-                window.draw(menuFullscreenText);
-                window.draw(menuExitText);
-                window.draw(testGame);
-                window.display();
+        if (gameStart)
+        {
+            testGame.gameRound();
+
+            window.clear(Color::Black);
+            window.draw(titleText);
+            window.draw(menuExitText);
+            window.draw(testGame);
+            window.display();
+        } else
+        {
+            window.clear(Color::Black);
+            window.draw(titleText);
+            window.draw(menuStartText);
+            window.draw(menuFullscreenText);
+            window.draw(menuExitText);
+            window.display();
+        }
+
+
     }
 	return 0;
  }
