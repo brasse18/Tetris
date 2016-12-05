@@ -25,6 +25,7 @@ int main() {
     while(window.isOpen()){
 
         Event event;
+
         while(window.pollEvent(event)) {
 
             switch (event.type) {
@@ -35,22 +36,24 @@ int main() {
 
                     // key pressed
                 case sf::Event::KeyPressed:
-
+                    if (event.type == sf::Event::KeyPressed)
+                    {
+                        game.KeyPressed(event);
+                        if (event.key.code == sf::Keyboard::Escape)
+                        {
+                            std::cout << "the escape key was pressed" << std::endl;
+                            std::cout << "control:" << event.key.control << std::endl;
+                            std::cout << "alt:" << event.key.alt << std::endl;
+                            std::cout << "shift:" << event.key.shift << std::endl;
+                            std::cout << "system:" << event.key.system << std::endl;
+                        }
+                    }
                     break;
 
                 case sf::Event::MouseButtonPressed:
-                    if (event.type == sf::Event::MouseButtonPressed) {
-                        if (event.mouseButton.button == sf::Mouse::Left) {
-                            menu.update(window,event.mouseButton.x,event.mouseButton.y);
-                            std::cout << "the Left button was pressed" << std::endl;
-                            std::cout << "mouse x: " << event.mouseButton.x << std::endl;
-                            std::cout << "mouse y: " << event.mouseButton.y << std::endl;
-                        }
-                        if (event.mouseButton.button == sf::Mouse::Right) {
-                            std::cout << "the right button was pressed" << std::endl;
-                            std::cout << "mouse x: " << event.mouseButton.x << std::endl;
-                            std::cout << "mouse y: " << event.mouseButton.y << std::endl;
-                        }
+                    if (event.type == sf::Event::MouseButtonPressed)
+                    {
+                        menu.MouseButtonPressed(event,window);
                     }
                     break;
                     // we don't process other types of events

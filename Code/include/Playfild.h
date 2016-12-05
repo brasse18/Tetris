@@ -9,6 +9,7 @@ class Playfild : public Drawable
 	public:
 		Playfild();
         void move();
+        void move(int nr);
         RectangleShape playfild;
 	private:
 		Blocks blocks[1];

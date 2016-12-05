@@ -21,6 +21,7 @@ class Box : public Drawable
         RectangleShape box;
 	    void move();
         bool canMove();
-    void move(int nr);
+        bool canMove(int nr);
+        void move(int nr);
 };
 #endif //BOX_H

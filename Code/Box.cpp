@@ -1,3 +1,4 @@
+#include <iostream>
 #include "include/Box.h"
 #include "SFML/Graphics.hpp"
 
@@ -29,14 +30,10 @@ void Box::move()
 void Box::move(int nr)
 {
     int x = nr*50;
-    if (box.getPosition().x > 100 && box.getPosition().x < 400)
-    {
-
-    } else
+    if (canMove(nr))
     {
         box.setPosition(box.getPosition().x + x,box.getPosition().y);
     }
-
 }
 
 Box::Box(int x, int y,sf::Color color)
@@ -56,6 +53,18 @@ bool Box::canMove()
     bool anser = true;
 
     if (box.getPosition().y+50 >= stop)
+    {
+        anser = false;
+    }
+
+    return anser;
+}
+
+bool Box::canMove(int nr)
+{
+    bool anser = true;
+    x = nr*50;
+    if (box.getPosition().x+nr >= 400)
     {
         anser = false;
     }

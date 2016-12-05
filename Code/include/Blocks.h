@@ -16,6 +16,7 @@ class Blocks : public Drawable
         void move();
         void move(int nr);
         bool canMove();
+        bool canMove(int nr);
         virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 	private:
         Box box[4];

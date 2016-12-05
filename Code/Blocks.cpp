@@ -36,9 +36,11 @@ void Blocks::move()
 
 void Blocks::move(int nr)
 {
-    for (int i=0;i<nrOfBox;i++)
+    if (canMove())
     {
-        box[i].move(nr);
+        for (int i = 0; i < nrOfBox; i++) {
+            box[i].move(nr);
+        }
     }
 }
 
@@ -56,6 +58,16 @@ bool Blocks::canMove()
     for (int i=0;i<nrOfBox;i++)
     {
         anser = box[i].canMove();
+    }
+    return anser;
+}
+
+bool Blocks::canMove(int nr)
+{
+    bool anser = true;
+    for (int i=0;i<nrOfBox;i++)
+    {
+        anser = box[i].canMove(nr);
     }
     return anser;
 }

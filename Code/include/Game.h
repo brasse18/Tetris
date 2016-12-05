@@ -13,8 +13,9 @@ class Game : public Drawable
 		Game();
         int nrOfBlocks = 1;
         Playfild playfild;
-    void gameRound();
-		void Update(float dt);
+        void gameRound();
+		void Update(Event &event,RenderWindow &window);
+        void KeyPressed(Event event);
 	private:
 		virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
     

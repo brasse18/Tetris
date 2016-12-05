@@ -26,3 +26,11 @@ void Playfild::move()
         blocks[i].move();
     }
 }
+
+void Playfild::move(int nr)
+{
+    for (int i=0;i<nrOfBlocks;i++)
+    {
+        blocks[i].move(nr);
+    }
+}

@@ -20,6 +20,8 @@ class Menu : public Drawable
         bool getFulscreen();
         void switchFulscreen();
         bool getStart();
-        void update(RenderWindow &window,int x,int y);
+        void update(Event &event,RenderWindow &window);
+        void MouseButtonPressed(Event &event,RenderWindow &window);
+        bool isClickt(Text text,int x,int y);
 };
 #endif
