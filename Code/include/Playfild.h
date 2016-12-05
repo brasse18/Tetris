@@ -1,12 +1,18 @@
-#ifndef CLASS_H
+#ifndef PLAYFILD_H
 #include <string>
+#include "Bocks.h"
 
 using namespace std;
 
-class Class
+class Playfild : public Drawable
 {
-	private:
 	public:
-		Class();
+		Playfild();
+        void move();
+        RectangleShape playfild;
+	private:
+		Blocks blocks[1];
+		int nrOfBlocks = 1;
+		virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 };
 #endif

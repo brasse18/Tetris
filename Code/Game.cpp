@@ -1,12 +1,6 @@
 #include "include/Game.h"
 
-
 Game::Game() 
-{
-
-}
-
-Game::~Game() 
 {
 
 }
@@ -18,10 +12,10 @@ void Game::Update(float dt)
 
 void Game::draw(sf::RenderTarget &target, sf::RenderStates states) const 
 {
-    target.draw(mBox);
+    target.draw(playfild);
 }
 
 void Game::gameRound()
 {
-    mBox.move();
+    playfild.move();
 }

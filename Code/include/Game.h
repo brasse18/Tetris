@@ -2,7 +2,7 @@
 #define GAME_HPP
 #include <string>
 #include <SFML/Graphics.hpp>
-#include "Box.h"
+#include "Playfild.h"
 
 using namespace std;
 using namespace sf;
@@ -11,9 +11,8 @@ class Game : public Drawable
 {
 	public:
 		Game();
-		~Game();
-        Box mBox;
-        RectangleShape box;
+        int nrOfBlocks = 1;
+        Playfild playfild;
     void gameRound();
 		void Update(float dt);
 	private:
