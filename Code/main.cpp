@@ -41,8 +41,8 @@ int main() {
                 case sf::Event::MouseButtonPressed:
                     if (event.type == sf::Event::MouseButtonPressed) {
                         if (event.mouseButton.button == sf::Mouse::Left) {
-                            menu.update(window,Mouse::getPosition().x,Mouse::getPosition().y;
-                            std::cout << "the right button was pressed" << std::endl;
+                            menu.update(window,event.mouseButton.x,event.mouseButton.y);
+                            std::cout << "the Left button was pressed" << std::endl;
                             std::cout << "mouse x: " << event.mouseButton.x << std::endl;
                             std::cout << "mouse y: " << event.mouseButton.y << std::endl;
                         }

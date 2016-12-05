@@ -32,23 +32,26 @@ Menu::Menu()
 
 void Menu::draw(sf::RenderTarget &target, sf::RenderStates states) const
 {
-    target.draw(menuStartText);
-    target.draw(menuFullscreenText);
+    if (!gameStart)
+    {
+        target.draw(menuStartText);
+        target.draw(menuFullscreenText);
+    }
     target.draw(menuExitText);
 }
 
 void Menu::update(RenderWindow &window,int x,int y)
 {
-    if (Mouse::isButtonPressed(Mouse::Left)) {
-        if (x > menuStartText.getPosition().x &&
-            x < menuStartText.getPosition().x + menuStartText.getLocalBounds().width) {
-            if (y > menuStartText.getPosition().y &&
-                y < menuStartText.getPosition().y + menuStartText.getLocalBounds().height) {
-                cout << "Start" << endl;
-                gameStart = true;
-            }
+    if (x > menuStartText.getPosition().x &&
+        x < menuStartText.getPosition().x + menuStartText.getLocalBounds().width) {
+        if (y > menuStartText.getPosition().y &&
+            y < menuStartText.getPosition().y + menuStartText.getLocalBounds().height) {
+            cout << "Start" << endl;
+            menuExitText.setPosition(Vector2f(400,5));
+            gameStart = true;
         }
-
+    }
+    if (!gameStart) {
         if (x > menuFullscreenText.getPosition().x &&
             x < menuFullscreenText.getPosition().x + menuFullscreenText.getLocalBounds().width) {
             if (y > menuFullscreenText.getPosition().y &&
@@ -57,28 +60,29 @@ void Menu::update(RenderWindow &window,int x,int y)
                 if (true == isFullscreen) {
                     window.create(sf::VideoMode(640, 480), "Tetris", sf::Style::Default);
                     menuFullscreenText.setString("Fullscreen mod");
-                    isFullscreen = false;
+                    this->isFullscreen = false;
                 } else {
                     cout << "Fullscreen mod" << endl;
                     window.create(sf::VideoMode(VideoMode::getDesktopMode().width,
                                                 VideoMode::getDesktopMode().height), "Tetris",
                                   sf::Style::Fullscreen);
                     menuFullscreenText.setString("Window mod");
-                    isFullscreen = true;
+                    this->isFullscreen = true;
                 }
 
-            }
-
-            if (position.x > menuExitText.getPosition().x &&
-                position.x < menuExitText.getPosition().x + menuExitText.getLocalBounds().width) {
-                if (position.y > menuExitText.getPosition().y &&
-                    position.y < menuExitText.getPosition().y + menuExitText.getLocalBounds().height) {
-                    cout << "Exit" << endl;
-                }
             }
         }
     }
-}
+    if (x > menuExitText.getPosition().x &&
+        x < menuExitText.getPosition().x + menuExitText.getLocalBounds().width) {
+            if (y > menuExitText.getPosition().y &&
+                y < menuExitText.getPosition().y + menuExitText.getLocalBounds().height) {
+                cout << "Exit" << endl;
+                window.close();
+            }
+        }
+    }
+
 
 bool Menu::getStart()
 {
