@@ -64,10 +64,28 @@ bool Box::canMove(int nr)
 {
     bool anser = true;
     x = nr*50;
-    if (box.getPosition().x+nr >= 400)
+    if (box.getPosition().y+50 >= stop)
     {
         anser = false;
+    } else
+    {
+        if (x > 0)
+        {
+            if (box.getPosition().x+x >= 300)
+            {
+                cout << "position: " << box.getPosition().x << endl;
+                anser = false;
+            }
+        } else
+        {
+            if (box.getPosition().x+x <= 0)
+            {
+                cout << "position: " << box.getPosition().x << endl;
+                anser = false;
+            }
+        }
     }
+
 
     return anser;
 }

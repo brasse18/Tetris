@@ -10,9 +10,10 @@ class Playfild : public Drawable
 		Playfild();
         void move();
         void move(int nr);
+        void spanBlocks();
         RectangleShape playfild;
 	private:
-		Blocks blocks[1];
+		Blocks blocks[2];
 		int nrOfBlocks = 1;
 		virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 };

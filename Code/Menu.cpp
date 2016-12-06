@@ -32,12 +32,23 @@ Menu::Menu()
 
 void Menu::draw(sf::RenderTarget &target, sf::RenderStates states) const
 {
-    if (!gameStart)
+    switch (menuMod)
     {
-        target.draw(menuStartText);
-        target.draw(menuFullscreenText);
+        case 0:
+            target.draw(menuStartText);
+            target.draw(menuFullscreenText);
+            target.draw(menuExitText);
+            break;
+        case 1:
+            target.draw(menuExitText);
+            break;
+        case 2:
+            target.draw(menuExitText);
+            break;
+
+        default:
+            break;
     }
-    target.draw(menuExitText);
 }
 
 void Menu::update(Event &event,RenderWindow &window)
@@ -73,7 +84,6 @@ bool Menu::isClickt(Text text,int x,int y)
             anser = true;
         }
     }
-
     return anser;
 }
 
@@ -82,18 +92,16 @@ void Menu::MouseButtonPressed(Event &event, RenderWindow &window)
     int x = event.mouseButton.x;
     int y = event.mouseButton.y;
     if (event.type == sf::Event::MouseButtonPressed) {
-        if (event.mouseButton.button == sf::Mouse::Left) {
-            if (isClickt(menuExitText, x, y)) {
-                cout << "Exit" << endl;
-                window.close();
-            }
-            if (!gameStart) {
+        if (event.mouseButton.button == sf::Mouse::Left)
+        {
+        switch (menuMod) {
+            case 0:
                 if (isClickt(menuStartText, x, y)) {
                     cout << "Start" << endl;
                     menuExitText.setPosition(Vector2f(400, 5));
                     gameStart = true;
+                    menuMod = 1;
                 }
-
                 if (isClickt(menuFullscreenText, x, y)) {
                     cout << "Fullscreen" << endl;
                     if (true == isFullscreen) {
@@ -108,11 +116,43 @@ void Menu::MouseButtonPressed(Event &event, RenderWindow &window)
                         menuFullscreenText.setString("Window mod");
                         this->isFullscreen = true;
                     }
+                    if (isClickt(menuExitText, x, y)) {
+                        cout << "Exit" << endl;
+                        window.close();
+                    }
+                    break;
+                    case 1:
+                        if (isClickt(menuExitText, x, y)) {
+                            cout << "Exit" << endl;
+                            window.close();
+                        }
+                    break;
+                    case 2:
+                        if (isClickt(menuExitText, x, y)) {
+                            cout << "Exit" << endl;
+                            window.close();
+                        }
+                    break;
+
+                    default:
+                        break;
                 }
             }
         }
-        if (event.mouseButton.button == sf::Mouse::Right) {
+        if (event.mouseButton.button == sf::Mouse::Right)
+        {
+            switch (menuMod)
+            {
+                case 0:
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    break;
 
+                default:
+                    break;
+            }
         }
     }
 }

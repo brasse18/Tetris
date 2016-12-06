@@ -21,8 +21,8 @@ class Blocks : public Drawable
 	private:
         Box box[4];
         int nrOfBox = 4;
-        int startX = 10;
-        int startY = 10;
+        int startX = 9;
+        int startY = 0;
 
 };
 #endif //BLOCKS_H

@@ -14,6 +14,7 @@ class Menu : public Drawable
         Text menuStartText;
         bool isFullscreen = false;
         bool gameStart = false;
+		int menuMod = 0; //0=Start menu 1=RunGameMenu 2=InGameMenu
 		virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 	public:
 		Menu();
