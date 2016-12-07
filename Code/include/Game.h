@@ -1,12 +1,23 @@
-#ifndef CLASS_H
+#ifndef GAME_HPP
+#define GAME_HPP
 #include <string>
+#include <SFML/Graphics.hpp>
+#include "Playfild.h"
 
 using namespace std;
+using namespace sf;
 
-class Class
+class Game : public Drawable
 {
-	private:
 	public:
-		Class();
+		Game();
+        int nrOfBlocks = 1;
+        Playfild playfild;
+        void gameRound();
+		void Update(Event &event,RenderWindow &window);
+        void KeyPressed(Event event);
+	private:
+		virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+    
 };
 #endif

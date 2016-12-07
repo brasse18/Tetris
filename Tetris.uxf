@@ -4,16 +4,17 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
-      <y>370</y>
-      <w>210</w>
+      <x>20</x>
+      <y>360</y>
+      <w>370</w>
       <h>190</h>
     </coordinates>
     <panel_attributes>Game
 --
  -scoreboard: Scoreboard
  -playfield: Playfield
- -setings[]: int 
+ -setings[]: int
+ -draw(RenderTarget&amp; target, RenderStates states)
 --
  +gameRound()
  +endGame()</panel_attributes>
@@ -22,8 +23,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>680</x>
-      <y>10</y>
+      <x>790</x>
+      <y>0</y>
       <w>300</w>
       <h>180</h>
     </coordinates>
@@ -45,17 +46,19 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>280</x>
-      <y>800</y>
-      <w>210</w>
+      <x>230</x>
+      <y>790</y>
+      <w>380</w>
       <h>170</h>
     </coordinates>
     <panel_attributes>Playfield
 --
  -blocks[]: Block
- -boxs[]: box
+ -nrOfBlocks: int
+ -draw(RenderTarget&amp; target, RenderStates states)
 --
- +MoveBocks(x: int,y: int)
+ +MoveBocks(y: int)
+ +moveBlocks()
  +chekFullLine(): bool
  +removeLine(line: int)</panel_attributes>
     <additional_attributes/>
@@ -63,8 +66,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>370</x>
-      <y>10</y>
+      <x>480</x>
+      <y>0</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
@@ -86,8 +89,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
-      <y>90</y>
+      <x>680</x>
+      <y>80</y>
       <w>130</w>
       <h>30</h>
     </coordinates>
@@ -97,8 +100,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>270</x>
-      <y>90</y>
+      <x>380</x>
+      <y>80</y>
       <w>120</w>
       <h>330</h>
     </coordinates>
@@ -108,8 +111,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>270</x>
-      <y>500</y>
+      <x>380</x>
+      <y>490</y>
       <w>130</w>
       <h>320</h>
     </coordinates>
@@ -119,28 +122,30 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>570</x>
-      <y>800</y>
-      <w>210</w>
+      <x>650</x>
+      <y>790</y>
+      <w>370</w>
       <h>170</h>
     </coordinates>
     <panel_attributes>Box
 --
  -Colour: int
- -position[2]: int
+ -x: int
+ -y: int
+ -draw(RenderTarget&amp; target, RenderStates states)
 --
  +move(x: int,y: int)
  +getLine(): int
  +getRow(): int
- +checkIfMove(): bool
+ +canMove(): bool
  </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>910</x>
-      <y>210</y>
+      <x>1150</x>
+      <y>200</y>
       <w>210</w>
       <h>170</h>
     </coordinates>
@@ -156,8 +161,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>910</x>
-      <y>390</y>
+      <x>1150</x>
+      <y>380</y>
       <w>210</w>
       <h>170</h>
     </coordinates>
@@ -173,8 +178,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>910</x>
-      <y>570</y>
+      <x>1150</x>
+      <y>560</y>
       <w>210</w>
       <h>170</h>
     </coordinates>
@@ -190,8 +195,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>910</x>
-      <y>750</y>
+      <x>1150</x>
+      <y>740</y>
       <w>210</w>
       <h>170</h>
     </coordinates>
@@ -207,38 +212,28 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>560</x>
-      <y>490</y>
-      <w>210</w>
+      <x>570</x>
+      <y>480</y>
+      <w>420</w>
       <h>170</h>
     </coordinates>
-    <panel_attributes>Bocks
+    <panel_attributes>Blocks
 --
  -boxs[]: box
  -nrOfBosx: int
- 
+ -draw(sf::RenderTarget&amp; target, sf::RenderStates states)
 --
  +delBox()
  +moveBox(x: int,y: int)
+ +canMove()
  </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>480</x>
-      <y>860</y>
-      <w>110</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>670</x>
-      <y>650</y>
+      <x>780</x>
+      <y>640</y>
       <w>30</w>
       <h>170</h>
     </coordinates>
@@ -248,56 +243,74 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
-      <y>590</y>
-      <w>160</w>
+      <x>530</x>
+      <y>580</y>
+      <w>60</w>
       <h>230</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;210.0;10.0;10.0;140.0;10.0</additional_attributes>
+    <additional_attributes>10.0;210.0;10.0;10.0;40.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>760</x>
-      <y>310</y>
-      <w>170</w>
+      <x>980</x>
+      <y>300</y>
+      <w>190</w>
       <h>240</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;220.0;50.0;220.0;50.0;10.0;150.0;10.0</additional_attributes>
+    <additional_attributes>10.0;220.0;70.0;220.0;70.0;10.0;170.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>760</x>
-      <y>490</y>
-      <w>170</w>
+      <x>980</x>
+      <y>480</y>
+      <w>190</w>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;80.0;70.0;80.0;70.0;10.0;150.0;10.0</additional_attributes>
+    <additional_attributes>10.0;80.0;100.0;80.0;100.0;10.0;170.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>760</x>
-      <y>580</y>
-      <w>170</w>
+      <x>980</x>
+      <y>570</y>
+      <w>190</w>
       <h>130</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;70.0;10.0;70.0;110.0;150.0;110.0</additional_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0;100.0;110.0;170.0;110.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>760</x>
-      <y>620</y>
-      <w>170</w>
+      <x>980</x>
+      <y>610</y>
+      <w>190</w>
       <h>270</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;50.0;10.0;50.0;250.0;150.0;250.0</additional_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0;70.0;250.0;170.0;250.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>70</y>
+      <w>370</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Menu
+--
+ -isFulScreen: int
+ -difficulty: int
+ -draw(RenderTarget&amp; target, RenderStates states)
+--
+ +getSetings(): int
+ +getDifficulty: int</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
