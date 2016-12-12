@@ -15,14 +15,16 @@ class Blocks : public Drawable
         void onLine(int nr);
         void move();
         void move(int nr);
+        void rotate();
         bool canMove();
         bool canMove(int nr);
         virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 	private:
-        Box box[4];
-        int nrOfBox = 4;
-        int startX = 9;
-        int startY = 0;
+    int nrOfBox = 4;
 
+protected:
+    Box box[4];
+    int startX = 9;
+    int startY = 0;
 };
 #endif //BLOCKS_H

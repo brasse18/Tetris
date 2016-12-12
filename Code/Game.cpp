@@ -44,6 +44,11 @@ void Game::KeyPressed(Event event)
         std::cout << "the A key was pressed" << std::endl;
         playfild.move(-1);
     }
+    if (event.key.code == sf::Keyboard::R)
+    {
+        std::cout << "the R key was pressed" << std::endl;
+        playfild.rotateBlocks();
+    }
     if (event.key.code == sf::Keyboard::Space)
     {
         std::cout << "the Space key was pressed" << std::endl;

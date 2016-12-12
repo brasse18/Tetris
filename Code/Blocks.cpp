@@ -1,6 +1,7 @@
 #include "include/Blocks.h"
 #include "include/Box.h"
 #include "SFML/Graphics.hpp"
+#include <iostream>
 
 using namespace std;
 using namespace sf;
@@ -38,7 +39,8 @@ void Blocks::move(int nr)
 {
     if (canMove(nr))
     {
-        for (int i = 0; i < nrOfBox; i++) {
+        for (int i = 0; i < nrOfBox; i++)
+        {
             box[i].move(nr);
         }
     }
@@ -73,4 +75,12 @@ bool Blocks::canMove(int nr)
         }
     }
     return anser;
+}
+
+void Blocks::rotate()
+{
+    box[0].move(0,0);
+    box[1].move(1,-1);
+    box[2].move(2,-2);
+    box[3].move(1,-1);
 }
