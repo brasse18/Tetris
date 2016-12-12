@@ -15,7 +15,7 @@ class Blocks : public Drawable
         void onLine(int nr);
         void move();
         void move(int nr);
-        void rotate();
+        virtual void rotate();
         bool canMove();
         bool canMove(int nr);
         virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;

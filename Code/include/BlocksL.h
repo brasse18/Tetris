@@ -15,7 +15,7 @@ using namespace std;
 class BlocksL : public Blocks {
 public:
     BlocksL();
-    void rotate();
+    void rotate() override;
 };
 
 
