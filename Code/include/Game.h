@@ -16,6 +16,7 @@ class Game : public Drawable
         void gameRound();
 		void Update(Event &event,RenderWindow &window);
         void KeyPressed(Event event);
+	void quitGame();
 	private:
 		virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
     

@@ -3,13 +3,17 @@
 #include <string.h>
 #include "include/Game.h"
 #include "include/Menu.h"
+#include <time.h>       /* time */
+#include <stdlib.h>
+
 
 using namespace sf;
 using namespace std;
 
 int main() {
     bool isFullscreen = false;
-    bool gameStart = false;
+    bool quitGame = false;
+    srand (time(NULL));
     RenderWindow window(VideoMode(640,480,32),"Tetris");
 
     Game game;
@@ -21,6 +25,8 @@ int main() {
     Text titleText("Tetris",font,11);
     titleText.setCharacterSize(35);
     titleText.setPosition(200,10);
+
+    menu.setMenuMod(0);
 
     while(window.isOpen()){
 
@@ -39,19 +45,10 @@ int main() {
                     if (event.type == sf::Event::KeyPressed)
                     {
                         game.KeyPressed(event);
-                        if (event.key.code == sf::Keyboard::Escape)
-                        {
-                            std::cout << "the escape key was pressed" << std::endl;
-                            std::cout << "control:" << event.key.control << std::endl;
-                            std::cout << "alt:" << event.key.alt << std::endl;
-                            std::cout << "shift:" << event.key.shift << std::endl;
-                            std::cout << "system:" << event.key.system << std::endl;
-                        }
                     }
                     break;
 
                 case sf::Event::MouseButtonPressed:
-                    if (event.type == sf::Event::MouseButtonPressed)
                     {
                         menu.MouseButtonPressed(event,window);
                     }
@@ -60,6 +57,11 @@ int main() {
                 default:
                     break;
             }
+        }
+
+        if (menu.getGameQuit())
+        {
+            game.quitGame();
         }
 
         if (menu.getStart())
@@ -77,8 +79,6 @@ int main() {
             window.draw(menu);
             window.display();
         }
-
-
     }
 	return 0;
  }

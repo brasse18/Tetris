@@ -3,6 +3,7 @@
 //
 
 #include "include/BlocksL.h"
+#include <iostream>
 
 BlocksL::BlocksL()
 {
@@ -10,12 +11,14 @@ BlocksL::BlocksL()
     box[1] = Box(startX,startY+50,sf::Color::Green);
     box[2] = Box(startX,startY+100,sf::Color::Green);
     box[3] = Box(startX+50,startY+100,sf::Color::Green);
-}
-
-void BlocksL::rotate()
-{
-    box[0].move(0,0);
-    box[1].move(1,-1);
-    box[2].move(2,-2);
-    box[3].move(1,-1);
+    int x[4][4] = {{ 0, 1, 2, 1},  {1, 0,-1,-2},   { 1, 0,-1, 0},  {-2,-1, 0, 1}};
+    int y[4][4] = {{ 2, 1, 0,-1},  {0,-1,-2,-1},   {-1, 0, 1, 2},  {-1, 0, 1, 0}};
+    for (int i=0;i<4;i++)
+    {
+        for (int e=0;e<4;e++)
+        {
+            posX[i][e]=x[i][e];
+            posY[i][e]=y[i][e];
+        }
+    }
 }

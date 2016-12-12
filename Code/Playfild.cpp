@@ -27,6 +27,7 @@ void Playfild::draw(sf::RenderTarget &target, sf::RenderStates states) const
 
 void Playfild::move()
 {
+
     for (int i=0;i<acktivBlock;i++)
     {
         blocks[i].move();
@@ -54,11 +55,32 @@ void Playfild::spanBlocks()
         delete [] blocks;
         blocks = temp;
         nrOfBlocks = nrOfBlocks*2;
-        blocks[acktivBlock] = BlocksL();
+
+        switch (randBlock)
+        {
+            case 1:
+                blocks[acktivBlock] = BlocksL();
+                break;
+            case 2:
+                blocks[acktivBlock] = Blocks();
+                break;
+
+            default:
+                break;
+        }
     }
 }
 
 void Playfild::rotateBlocks()
 {
     blocks[acktivBlock-1].rotate();
+}
+
+bool Playfild::canMove() {
+    return blocks[acktivBlock-1].canMove();
+}
+
+void Playfild::quitGame()
+{
+    delete [] blocks;
 }

@@ -59,7 +59,10 @@ bool Blocks::canMove()
     bool anser = true;
     for (int i=0;i<nrOfBox;i++)
     {
-        anser = box[i].canMove();
+        if (anser)
+        {
+            anser = box[i].canMove();
+        }
     }
     return anser;
 }
@@ -79,8 +82,16 @@ bool Blocks::canMove(int nr)
 
 void Blocks::rotate()
 {
-    box[0].move(0,0);
-    box[1].move(1,-1);
-    box[2].move(2,-2);
-    box[3].move(1,-1);
+
+    box[0].move(posX[rotateStat][0],posY[rotateStat][0]);
+    box[1].move(posX[rotateStat][1],posY[rotateStat][1]);
+    box[2].move(posX[rotateStat][2],posY[rotateStat][2]);
+    box[3].move(posX[rotateStat][3],posY[rotateStat][3]);
+    if (rotateStat == 3)
+    {
+        rotateStat = 0;
+    } else
+    {
+        rotateStat++;
+    }
 }

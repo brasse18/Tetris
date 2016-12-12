@@ -22,7 +22,7 @@ void Box::move()
 {
     if (canMove())
     {
-        box.move(0,0.02);
+        box.move(0,0.08);
     }
 
 }

@@ -20,13 +20,19 @@ Menu::Menu()
     menuFullscreenText.setCharacterSize(11);
     menuFullscreenText.setString("Fullscreen mod");
     menuFullscreenText.setCharacterSize(25);
-    menuFullscreenText.setPosition(200,180);
+    menuFullscreenText.setPosition(200,200);
+
+    menuQuitGameText.setFont(font);
+    menuQuitGameText.setCharacterSize(11);
+    menuQuitGameText.setString("Quit Game");
+    menuQuitGameText.setCharacterSize(25);
+    menuQuitGameText.setPosition(400,50);
 
     menuExitText.setFont(font);
     menuExitText.setCharacterSize(11);
     menuExitText.setString("Exit");
     menuExitText.setCharacterSize(25);
-    menuExitText.setPosition(200,200);
+    menuExitText.setPosition(200,250);
 
 }
 
@@ -41,6 +47,7 @@ void Menu::draw(sf::RenderTarget &target, sf::RenderStates states) const
             break;
         case 1:
             target.draw(menuExitText);
+            target.draw(menuQuitGameText);
             break;
         case 2:
             target.draw(menuExitText);
@@ -74,35 +81,31 @@ void Menu::switchFulscreen()
     }
 }
 
-bool Menu::isClickt(Text text,int x,int y)
+bool Menu::isClickt(Text text,Vector2i mous)
 {
     bool anser = false;
-    if (x > text.getPosition().x &&
-        x < text.getPosition().x + text.getLocalBounds().width) {
-        if (y > text.getPosition().y &&
-            y < text.getPosition().y + text.getLocalBounds().height) {
+    if (text.getGlobalBounds().contains(mous.x,mous.y)) {
             anser = true;
-        }
     }
     return anser;
 }
 
 void Menu::MouseButtonPressed(Event &event, RenderWindow &window)
 {
-    int x = event.mouseButton.x;
-    int y = event.mouseButton.y;
-    if (event.type == sf::Event::MouseButtonPressed) {
+    mous = Vector2i(event.mouseButton.x,event.mouseButton.y);
         if (event.mouseButton.button == sf::Mouse::Left)
         {
         switch (menuMod) {
             case 0:
-                if (isClickt(menuStartText, x, y)) {
+            {
+                if (isClickt(menuStartText,mous))
+                {
                     cout << "Start" << endl;
                     menuExitText.setPosition(Vector2f(400, 5));
                     gameStart = true;
-                    menuMod = 1;
+                    setMenuMod(1);
                 }
-                if (isClickt(menuFullscreenText, x, y)) {
+                if (isClickt(menuFullscreenText,mous)) {
                     cout << "Fullscreen" << endl;
                     if (true == isFullscreen) {
                         window.create(sf::VideoMode(640, 480), "Tetris", sf::Style::Default);
@@ -116,43 +119,88 @@ void Menu::MouseButtonPressed(Event &event, RenderWindow &window)
                         menuFullscreenText.setString("Window mod");
                         this->isFullscreen = true;
                     }
-                    if (isClickt(menuExitText, x, y)) {
+                }
+                    if (isClickt(menuExitText,mous)) {
                         cout << "Exit" << endl;
                         window.close();
                     }
+                }
                     break;
-                    case 1:
-                        if (isClickt(menuExitText, x, y)) {
-                            cout << "Exit" << endl;
-                            window.close();
-                        }
-                    break;
-                    case 2:
-                        if (isClickt(menuExitText, x, y)) {
-                            cout << "Exit" << endl;
-                            window.close();
-                        }
-                    break;
+            case 1:
+                if (isClickt(menuExitText,mous)) {
+                    cout << "Exit" << endl;
+                    window.close();
+                }
+                if (isClickt(menuQuitGameText,mous)) {
+                    cout << "Quit Game" << endl;
+                    gameStart = false;
+                    quitGame = true;
+                    setMenuMod(0);
+                }
+            break;
+            case 2:
+                if (isClickt(menuExitText,mous)) {
+                    cout << "Exit" << endl;
+                    window.close();
+                }
+            break;
 
-                    default:
-                        break;
+            default:
+                break;
                 }
             }
-        }
         if (event.mouseButton.button == sf::Mouse::Right)
         {
             switch (menuMod)
             {
                 case 0:
+
                     break;
                 case 1:
+
                     break;
                 case 2:
+
                     break;
 
                 default:
                     break;
             }
         }
+}
+
+bool Menu::getGameQuit()
+{
+    bool anser = false;
+    if (quitGame)
+    {
+        anser = quitGame;
+        quitGame = false;
+    }
+    return anser;
+}
+
+void Menu::setMenuMod(int nr)
+{
+    switch (nr)
+    {
+        case 0:
+            menuStartText.setPosition(200,150);
+            menuFullscreenText.setPosition(200,200);
+            menuExitText.setPosition(200,250);
+            menuMod = 0;
+            break;
+        case 1:
+            menuQuitGameText.setPosition(400,5);
+            menuExitText.setPosition(400,50);
+            menuMod = 1;
+            break;
+        case 2:
+            menuExitText.setPosition(400,5);
+            menuMod = 2;
+            break;
+
+        default:
+            break;
     }
 }
