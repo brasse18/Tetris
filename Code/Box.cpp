@@ -22,7 +22,11 @@ void Box::move()
 {
     if (canMove())
     {
+<<<<<<< HEAD
         box.move(0,0.02);
+=======
+        box.move(0,0.08);
+>>>>>>> development
     }
 
 }
@@ -43,7 +47,11 @@ Box::Box(int x, int y,sf::Color color)
     this->colour = color;
     box.setOutlineColor(sf::Color::Black);
     box.setOutlineThickness(3);
+<<<<<<< HEAD
     box.setPosition(this->x,this->y);
+=======
+    box.setPosition(x,y);
+>>>>>>> development
     box.setSize(Vector2f(47.0,47.0));
     box.setFillColor(this->colour);
 }
@@ -73,14 +81,22 @@ bool Box::canMove(int nr)
         {
             if (box.getPosition().x+x >= 300)
             {
+<<<<<<< HEAD
                 cout << "position: " << box.getPosition().x << endl;
+=======
+                //cout << "position: " << box.getPosition().x << endl;
+>>>>>>> development
                 anser = false;
             }
         } else
         {
             if (box.getPosition().x+x <= 0)
             {
+<<<<<<< HEAD
                 cout << "position: " << box.getPosition().x << endl;
+=======
+                //cout << "position: " << box.getPosition().x << endl;
+>>>>>>> development
                 anser = false;
             }
         }
@@ -89,3 +105,16 @@ bool Box::canMove(int nr)
 
     return anser;
 }
+<<<<<<< HEAD
+=======
+
+void Box::move(int mX, int mY)
+{
+    mX=mX*50;
+    mY=mY*50;
+    this->x = mX+box.getPosition().x;
+    this->y = mY+box.getPosition().y;
+    box.setPosition(x,y);
+    //cout << "X:" << box.getPosition().x << " Y: " << box.getPosition().y << endl;
+}
+>>>>>>> development

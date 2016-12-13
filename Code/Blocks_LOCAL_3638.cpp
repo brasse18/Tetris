@@ -1,10 +1,6 @@
 #include "include/Blocks.h"
 #include "include/Box.h"
 #include "SFML/Graphics.hpp"
-<<<<<<< HEAD
-=======
-#include <iostream>
->>>>>>> development
 
 using namespace std;
 using namespace sf;
@@ -42,12 +38,7 @@ void Blocks::move(int nr)
 {
     if (canMove(nr))
     {
-<<<<<<< HEAD
         for (int i = 0; i < nrOfBox; i++) {
-=======
-        for (int i = 0; i < nrOfBox; i++)
-        {
->>>>>>> development
             box[i].move(nr);
         }
     }
@@ -66,14 +57,7 @@ bool Blocks::canMove()
     bool anser = true;
     for (int i=0;i<nrOfBox;i++)
     {
-<<<<<<< HEAD
         anser = box[i].canMove();
-=======
-        if (anser)
-        {
-            anser = box[i].canMove();
-        }
->>>>>>> development
     }
     return anser;
 }
@@ -90,22 +74,3 @@ bool Blocks::canMove(int nr)
     }
     return anser;
 }
-<<<<<<< HEAD
-=======
-
-void Blocks::rotate()
-{
-
-    box[0].move(posX[rotateStat][0],posY[rotateStat][0]);
-    box[1].move(posX[rotateStat][1],posY[rotateStat][1]);
-    box[2].move(posX[rotateStat][2],posY[rotateStat][2]);
-    box[3].move(posX[rotateStat][3],posY[rotateStat][3]);
-    if (rotateStat == 3)
-    {
-        rotateStat = 0;
-    } else
-    {
-        rotateStat++;
-    }
-}
->>>>>>> development

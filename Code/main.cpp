@@ -3,13 +3,25 @@
 #include <string.h>
 #include "include/Game.h"
 #include "include/Menu.h"
+<<<<<<< HEAD
 
+=======
+#include <time.h>       /* time */
+#include <stdlib.h>
+
+
+>>>>>>> development
 using namespace sf;
 using namespace std;
 
 int main() {
     bool isFullscreen = false;
+<<<<<<< HEAD
     bool gameStart = false;
+=======
+    bool quitGame = false;
+    srand (time(NULL));
+>>>>>>> development
     RenderWindow window(VideoMode(640,480,32),"Tetris");
 
     Game game;
@@ -22,6 +34,11 @@ int main() {
     titleText.setCharacterSize(35);
     titleText.setPosition(200,10);
 
+<<<<<<< HEAD
+=======
+    menu.setMenuMod(0);
+
+>>>>>>> development
     while(window.isOpen()){
 
         Event event;
@@ -39,6 +56,7 @@ int main() {
                     if (event.type == sf::Event::KeyPressed)
                     {
                         game.KeyPressed(event);
+<<<<<<< HEAD
                         if (event.key.code == sf::Keyboard::Escape)
                         {
                             std::cout << "the escape key was pressed" << std::endl;
@@ -47,11 +65,16 @@ int main() {
                             std::cout << "shift:" << event.key.shift << std::endl;
                             std::cout << "system:" << event.key.system << std::endl;
                         }
+=======
+>>>>>>> development
                     }
                     break;
 
                 case sf::Event::MouseButtonPressed:
+<<<<<<< HEAD
                     if (event.type == sf::Event::MouseButtonPressed)
+=======
+>>>>>>> development
                     {
                         menu.MouseButtonPressed(event,window);
                     }
@@ -62,6 +85,14 @@ int main() {
             }
         }
 
+<<<<<<< HEAD
+=======
+        if (menu.getGameQuit())
+        {
+            game.quitGame();
+        }
+
+>>>>>>> development
         if (menu.getStart())
         {
             game.gameRound();
@@ -77,8 +108,11 @@ int main() {
             window.draw(menu);
             window.display();
         }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> development
     }
 	return 0;
  }
