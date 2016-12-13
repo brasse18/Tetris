@@ -23,9 +23,6 @@ class Box : public Drawable
         bool canMove();
         bool canMove(int nr);
         void move(int nr);
-<<<<<<< HEAD
-=======
         void move(int x, int y);
->>>>>>> development
 };
 #endif //BOX_H

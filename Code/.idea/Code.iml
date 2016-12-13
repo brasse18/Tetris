@@ -10,10 +10,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Game.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Box.cpp" isTestSource="false" />
-<<<<<<< HEAD
-=======
       <sourceFolder url="file://$MODULE_DIR$/BlocksL.cpp" isTestSource="false" />
->>>>>>> development
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">

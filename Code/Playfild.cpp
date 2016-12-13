@@ -1,12 +1,5 @@
 #include "include/Playfild.h"
 #include "SFML/Graphics.hpp"
-<<<<<<< HEAD
-
-Playfild::Playfild()
-{
-    playfild.setPosition(5,5);
-    playfild.setSize(Vector2f(305,400));
-=======
 #include <iostream>
 
 Playfild::Playfild()
@@ -18,7 +11,6 @@ Playfild::Playfild()
     blocks[1] = BlocksL();
     playfild.setPosition(5,5);
     playfild.setSize(Vector2f(size.x*50,size.y*50));
->>>>>>> development
     playfild.setOutlineThickness(2);
     playfild.setOutlineColor(sf::Color::Magenta);
     playfild.setFillColor(sf::Color::Black);
@@ -27,11 +19,7 @@ Playfild::Playfild()
 void Playfild::draw(sf::RenderTarget &target, sf::RenderStates states) const
 {
     target.draw(playfild);
-<<<<<<< HEAD
-    for (int i=0;i<nrOfBlocks;i++)
-=======
     for (int i=0;i<acktivBlock;i++)
->>>>>>> development
     {
         target.draw(blocks[i]);
     }
@@ -39,12 +27,8 @@ void Playfild::draw(sf::RenderTarget &target, sf::RenderStates states) const
 
 void Playfild::move()
 {
-<<<<<<< HEAD
-    for (int i=0;i<nrOfBlocks;i++)
-=======
 
     for (int i=0;i<acktivBlock;i++)
->>>>>>> development
     {
         blocks[i].move();
     }
@@ -52,25 +36,11 @@ void Playfild::move()
 
 void Playfild::move(int nr)
 {
-<<<<<<< HEAD
-    for (int i=0;i<nrOfBlocks;i++)
-    {
-        blocks[i].move(nr);
-    }
-=======
     blocks[acktivBlock-1].move(nr);
->>>>>>> development
 }
 
 void Playfild::spanBlocks()
 {
-<<<<<<< HEAD
-    if (nrOfBlocks+1 != 3)
-    {
-        nrOfBlocks++;
-    }
-}
-=======
     acktivBlock++;
     if (acktivBlock != nrOfBlocks)
     {
@@ -114,4 +84,3 @@ void Playfild::quitGame()
 {
     delete [] blocks;
 }
->>>>>>> development

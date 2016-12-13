@@ -20,9 +20,6 @@ Menu::Menu()
     menuFullscreenText.setCharacterSize(11);
     menuFullscreenText.setString("Fullscreen mod");
     menuFullscreenText.setCharacterSize(25);
-<<<<<<< HEAD
-    menuFullscreenText.setPosition(200,180);
-=======
     menuFullscreenText.setPosition(200,200);
 
     menuQuitGameText.setFont(font);
@@ -30,17 +27,12 @@ Menu::Menu()
     menuQuitGameText.setString("Quit Game");
     menuQuitGameText.setCharacterSize(25);
     menuQuitGameText.setPosition(400,50);
->>>>>>> development
 
     menuExitText.setFont(font);
     menuExitText.setCharacterSize(11);
     menuExitText.setString("Exit");
     menuExitText.setCharacterSize(25);
-<<<<<<< HEAD
-    menuExitText.setPosition(200,200);
-=======
     menuExitText.setPosition(200,250);
->>>>>>> development
 
 }
 
@@ -55,10 +47,7 @@ void Menu::draw(sf::RenderTarget &target, sf::RenderStates states) const
             break;
         case 1:
             target.draw(menuExitText);
-<<<<<<< HEAD
-=======
             target.draw(menuQuitGameText);
->>>>>>> development
             break;
         case 2:
             target.draw(menuExitText);
@@ -92,49 +81,22 @@ void Menu::switchFulscreen()
     }
 }
 
-<<<<<<< HEAD
-bool Menu::isClickt(Text text,int x,int y)
-{
-    bool anser = false;
-    if (x > text.getPosition().x &&
-        x < text.getPosition().x + text.getLocalBounds().width) {
-        if (y > text.getPosition().y &&
-            y < text.getPosition().y + text.getLocalBounds().height) {
-            anser = true;
-        }
-=======
 bool Menu::isClickt(Text text,Vector2i mous)
 {
     bool anser = false;
     if (text.getGlobalBounds().contains(mous.x,mous.y)) {
             anser = true;
->>>>>>> development
     }
     return anser;
 }
 
 void Menu::MouseButtonPressed(Event &event, RenderWindow &window)
 {
-<<<<<<< HEAD
-    int x = event.mouseButton.x;
-    int y = event.mouseButton.y;
-    if (event.type == sf::Event::MouseButtonPressed) {
-=======
     mous = Vector2i(event.mouseButton.x,event.mouseButton.y);
->>>>>>> development
         if (event.mouseButton.button == sf::Mouse::Left)
         {
         switch (menuMod) {
             case 0:
-<<<<<<< HEAD
-                if (isClickt(menuStartText, x, y)) {
-                    cout << "Start" << endl;
-                    menuExitText.setPosition(Vector2f(400, 5));
-                    gameStart = true;
-                    menuMod = 1;
-                }
-                if (isClickt(menuFullscreenText, x, y)) {
-=======
             {
                 if (isClickt(menuStartText,mous))
                 {
@@ -144,7 +106,6 @@ void Menu::MouseButtonPressed(Event &event, RenderWindow &window)
                     setMenuMod(1);
                 }
                 if (isClickt(menuFullscreenText,mous)) {
->>>>>>> development
                     cout << "Fullscreen" << endl;
                     if (true == isFullscreen) {
                         window.create(sf::VideoMode(640, 480), "Tetris", sf::Style::Default);
@@ -158,31 +119,6 @@ void Menu::MouseButtonPressed(Event &event, RenderWindow &window)
                         menuFullscreenText.setString("Window mod");
                         this->isFullscreen = true;
                     }
-<<<<<<< HEAD
-                    if (isClickt(menuExitText, x, y)) {
-                        cout << "Exit" << endl;
-                        window.close();
-                    }
-                    break;
-                    case 1:
-                        if (isClickt(menuExitText, x, y)) {
-                            cout << "Exit" << endl;
-                            window.close();
-                        }
-                    break;
-                    case 2:
-                        if (isClickt(menuExitText, x, y)) {
-                            cout << "Exit" << endl;
-                            window.close();
-                        }
-                    break;
-
-                    default:
-                        break;
-                }
-            }
-        }
-=======
                 }
                     if (isClickt(menuExitText,mous)) {
                         cout << "Exit" << endl;
@@ -213,18 +149,11 @@ void Menu::MouseButtonPressed(Event &event, RenderWindow &window)
                 break;
                 }
             }
->>>>>>> development
         if (event.mouseButton.button == sf::Mouse::Right)
         {
             switch (menuMod)
             {
                 case 0:
-<<<<<<< HEAD
-                    break;
-                case 1:
-                    break;
-                case 2:
-=======
 
                     break;
                 case 1:
@@ -232,15 +161,12 @@ void Menu::MouseButtonPressed(Event &event, RenderWindow &window)
                     break;
                 case 2:
 
->>>>>>> development
                     break;
 
                 default:
                     break;
             }
         }
-<<<<<<< HEAD
-=======
 }
 
 bool Menu::getGameQuit()
@@ -276,6 +202,5 @@ void Menu::setMenuMod(int nr)
 
         default:
             break;
->>>>>>> development
     }
 }

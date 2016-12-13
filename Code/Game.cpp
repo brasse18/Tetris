@@ -22,13 +22,10 @@ void Game::draw(sf::RenderTarget &target, sf::RenderStates states) const
 void Game::gameRound()
 {
     playfild.move();
-<<<<<<< HEAD
-=======
     if (!playfild.canMove())
     {
         playfild.spanBlocks();
     }
->>>>>>> development
 }
 
 void Game::KeyPressed(Event event)
@@ -51,8 +48,6 @@ void Game::KeyPressed(Event event)
         std::cout << "the A key was pressed" << std::endl;
         playfild.move(-1);
     }
-<<<<<<< HEAD
-=======
     if (event.key.code == sf::Keyboard::R)
     {
         std::cout << "the R key was pressed" << std::endl;
@@ -63,19 +58,15 @@ void Game::KeyPressed(Event event)
         std::cout << "the S key was pressed" << std::endl;
         cout << playfild.canMove() << endl;
     }
->>>>>>> development
     if (event.key.code == sf::Keyboard::Space)
     {
         std::cout << "the Space key was pressed" << std::endl;
         playfild.spanBlocks();
     }
 }
-<<<<<<< HEAD
-=======
 
 void Game::quitGame()
 {
     playfild.quitGame();
     playfild = Playfild();
 }
->>>>>>> development
