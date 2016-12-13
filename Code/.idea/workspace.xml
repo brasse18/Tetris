@@ -12,22 +12,7 @@
     </ADDITIONAL_GENERATION_ENVIRONMENT>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4de2e8b5-4e8a-4e44-ab60-1c4d9c0818a1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tetris" afterPath="$PROJECT_DIR$/tetris" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Blocks.cpp" afterPath="$PROJECT_DIR$/Blocks.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlocksL.cpp" afterPath="$PROJECT_DIR$/BlocksL.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Box.cpp" afterPath="$PROJECT_DIR$/Box.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game.cpp" afterPath="$PROJECT_DIR$/Game.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Menu.cpp" afterPath="$PROJECT_DIR$/Menu.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Playfild.cpp" afterPath="$PROJECT_DIR$/Playfild.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/Blocks.h" afterPath="$PROJECT_DIR$/include/Blocks.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/BlocksL.h" afterPath="$PROJECT_DIR$/include/BlocksL.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/Game.h" afterPath="$PROJECT_DIR$/include/Game.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/Menu.h" afterPath="$PROJECT_DIR$/include/Menu.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/Playfild.h" afterPath="$PROJECT_DIR$/include/Playfild.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
-    </list>
+    <list default="true" id="4de2e8b5-4e8a-4e44-ab60-1c4d9c0818a1" name="Default" comment="" />
     <ignored path="Code.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -535,16 +520,16 @@
       <workItem from="1481529441748" duration="553000" />
       <workItem from="1481530011581" duration="57000" />
       <workItem from="1481530083611" duration="12388000" />
-      <workItem from="1481545061762" duration="17219000" />
+      <workItem from="1481545061762" duration="17816000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94563000" />
+    <option name="totallyTimeSpent" value="95160000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="2560" height="1002" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.112034835" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -552,7 +537,7 @@
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20544836" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32762557" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32762557" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
