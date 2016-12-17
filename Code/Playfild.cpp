@@ -1,6 +1,7 @@
 #include "include/Playfild.h"
 #include "SFML/Graphics.hpp"
 #include <iostream>
+#include <stdlib.h>
 
 Playfild::Playfild()
 {
@@ -103,13 +104,14 @@ bool Playfild::fullLine()
 
 void Playfild::span()
 {
+    randBlock = rand() % 4 + 1;
     switch (randBlock)
     {
         case 1:
-            blocks[acktivBlock] = BlocksL();
+            blocks[acktivBlock] = Blocks();
             break;
         case 2:
-            blocks[acktivBlock] = Blocks();
+            blocks[acktivBlock] = BlocksL();
             break;
         case 3:
             blocks[acktivBlock] = BlocksT();
