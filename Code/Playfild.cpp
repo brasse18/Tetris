@@ -9,20 +9,20 @@ Playfild::Playfild()
         grid[i] = new int[size.y];
     }
     blocks[1] = BlocksL();
-    playfild.setPosition(5,5);
+    playfild.setPosition(3,0);
     playfild.setSize(Vector2f(size.x*50,size.y*50));
     playfild.setOutlineThickness(2);
     playfild.setOutlineColor(sf::Color::Magenta);
-    playfild.setFillColor(sf::Color::Black);
+    playfild.setFillColor(sf::Color::Transparent);
 }
 
 void Playfild::draw(sf::RenderTarget &target, sf::RenderStates states) const
 {
-    target.draw(playfild);
     for (int i=0;i<acktivBlock;i++)
     {
         target.draw(blocks[i]);
     }
+    target.draw(playfild);
 }
 
 void Playfild::move()
@@ -44,7 +44,7 @@ void Playfild::spanBlocks()
     acktivBlock++;
     if (acktivBlock != nrOfBlocks)
     {
-        blocks[acktivBlock] = BlocksL();
+        span();
     } else
     {
         Blocks* temp = new Blocks[nrOfBlocks*2];
@@ -55,25 +55,7 @@ void Playfild::spanBlocks()
         delete [] blocks;
         blocks = temp;
         nrOfBlocks = nrOfBlocks*2;
-        randBlock = rand() % 4 + 1;
-        switch (randBlock)
-        {
-            case 1:
-                blocks[acktivBlock] = BlocksL();
-                break;
-            case 2:
-                blocks[acktivBlock] = Blocks();
-                break;
-            case 3:
-                blocks[acktivBlock] = BlocksT();
-                break;
-            case 4:
-                blocks[acktivBlock] = BlocksS();
-                break;
-
-            default:
-                break;
-        }
+        span();
     }
 }
 
@@ -89,4 +71,54 @@ bool Playfild::canMove() {
 void Playfild::quitGame()
 {
     delete [] blocks;
+}
+
+void Playfild::delLine(int line)
+{
+    for (int i=0;i<nrOfBlocks;i++)
+    {
+        blocks[i].delBlox(line);
+    }
+}
+
+bool Playfild::fullLine()
+{
+    bool anser = false;
+    for (int i=0;i<nrOfBlocks;i++)
+    {
+        for (int row=0;row<8;row++)
+        {
+            for (int line=0;line<6;line++)
+            {
+                if (blocks[i].onPos(line,row))
+                {
+                    map[line][row] = 1;
+                }
+            }
+        }
+    }
+
+    return anser;
+}
+
+void Playfild::span()
+{
+    switch (randBlock)
+    {
+        case 1:
+            blocks[acktivBlock] = BlocksL();
+            break;
+        case 2:
+            blocks[acktivBlock] = Blocks();
+            break;
+        case 3:
+            blocks[acktivBlock] = BlocksT();
+            break;
+        case 4:
+            blocks[acktivBlock] = BlocksS();
+            break;
+
+        default:
+            break;
+    }
 }

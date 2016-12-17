@@ -11,8 +11,8 @@ class Blocks : public Drawable
 {
 public:
     Blocks();
-    void delBlox();
-    void onLine(int nr);
+    void delBlox(int line);
+    bool onPos(int line,int row);
     void move();
     void move(int nr);
     bool canMove();
@@ -23,10 +23,10 @@ private:
     int nrOfBox = 4;
 protected:
     Box box[4];
-    int posX[4][4];
-    int posY[4][4];
+    int posX[4][4] = {{ 0, 0, 0, 0},  {0, 0,0,0},   { 0, 0,0, 0},  {0,0, 0, 0}};
+    int posY[4][4] = {{ 0, 0, 0, 0},  {0, 0,0,0},   { 0, 0,0, 0},  {0,0, 0, 0}};
     int rotateStat = 0;
-    int startX = 9;
+    int startX = 5;
     int startY = 0;
 };
 #endif //BLOCKS_H

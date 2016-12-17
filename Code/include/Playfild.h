@@ -15,11 +15,15 @@ class Playfild : public Drawable
         void move();
         void move(int nr);
         void spanBlocks();
+    void span();
         bool canMove();
         void rotateBlocks();
+    bool fullLine();
+    void delLine(int line);
     void quitGame();
         RectangleShape playfild;
 	private:
+    int map[6][8];
         Vector2i size = Vector2i(6,8);
     int randBlock = rand() % 4 + 1;
         int** grid = new int*[size.x];

@@ -14,11 +14,15 @@ class Box : public Drawable
         int x = 200;
         int y = 100;
         int stop = 400;
+    bool isDel = false;
 
 	public:
 	    Box();
         Box(int x,int y,sf::Color color);
+    bool onPos(int line,int row);
         RectangleShape box;
+    bool onLine(int line);
+    void del();
 	    void move();
         bool canMove();
         bool canMove(int nr);

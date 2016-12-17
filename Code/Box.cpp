@@ -7,32 +7,34 @@ using namespace sf;
 
 Box::Box()
 {
-    box.setOutlineColor(sf::Color::Black);
-    box.setOutlineThickness(3);
-    box.setSize(Vector2f(47.0,47.0));
+    box.setSize(Vector2f(40.0,40.0));
     box.setFillColor(this->colour);
 }
 
 void Box::draw(sf::RenderTarget &target, sf::RenderStates states) const
 {
-    target.draw(box);
+    if (isDel == false)
+    {
+        target.draw(box);
+    }
 }
 
 void Box::move()
 {
-    if (canMove())
-    {
-        box.move(0,0.08);
+    if (isDel == false) {
+        if (canMove()) {
+            box.move(0, 0.08);
+        }
     }
-
 }
 
 void Box::move(int nr)
 {
-    int x = nr*50;
-    if (canMove(nr))
-    {
-        box.setPosition(box.getPosition().x + x,box.getPosition().y);
+    if (isDel == false) {
+        int x = nr * 50;
+        if (canMove(nr)) {
+            box.setPosition(box.getPosition().x + x, box.getPosition().y);
+        }
     }
 }
 
@@ -51,12 +53,12 @@ Box::Box(int x, int y,sf::Color color)
 bool Box::canMove()
 {
     bool anser = true;
-
-    if (box.getPosition().y+50 >= stop)
+    if (isDel == false)
     {
-        anser = false;
+        if (box.getPosition().y + 50 >= stop) {
+            anser = false;
+        }
     }
-
     return anser;
 }
 
@@ -64,28 +66,21 @@ bool Box::canMove(int nr)
 {
     bool anser = true;
     x = nr*50;
-    if (box.getPosition().y+50 >= stop)
-    {
-        anser = false;
-    } else
-    {
-        if (x > 0)
-        {
-            if (box.getPosition().x+x >= 300)
-            {
-                //cout << "position: " << box.getPosition().x << endl;
-                anser = false;
-            }
-        } else
-        {
-            if (box.getPosition().x+x <= 0)
-            {
-                //cout << "position: " << box.getPosition().x << endl;
-                anser = false;
+    if (isDel == false) {
+        if (box.getPosition().y + 50 >= stop) {
+            anser = false;
+        } else {
+            if (x > 0) {
+                if (box.getPosition().x + x >= 300) {
+                    anser = false;
+                }
+            } else {
+                if (box.getPosition().x + x <= 0) {
+                    anser = false;
+                }
             }
         }
     }
-
 
     return anser;
 }
@@ -97,5 +92,29 @@ void Box::move(int mX, int mY)
     this->x = mX+box.getPosition().x;
     this->y = mY+box.getPosition().y;
     box.setPosition(x,y);
-    //cout << "X:" << box.getPosition().x << " Y: " << box.getPosition().y << endl;
+}
+
+bool Box::onPos(int line,int row)
+{
+    bool anser = false;
+    if (box.getPosition().x-5 == row*50 && box.getPosition().y == line)
+    {
+        anser = true;
+    }
+    return anser;
+}
+
+bool Box::onLine(int line)
+{
+    bool anser = false;
+    if (box.getPosition().y+50 >= line*50)
+    {
+        anser = true;
+    }
+    return anser;
+}
+
+void Box::del()
+{
+    isDel = true;
 }

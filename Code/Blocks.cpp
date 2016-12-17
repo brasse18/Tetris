@@ -14,14 +14,28 @@ Blocks::Blocks()
     box[3] = Box(startX+50,startY+50,sf::Color::Blue);
 }
 
-void Blocks::delBlox()
+void Blocks::delBlox(int line)
 {
-
+    for (int i=0;i<nrOfBox;i++)
+    {
+        if (box[i].onLine(line))
+        {
+            box[i].del();
+        }
+    }
 }
 
-void Blocks::onLine(int nr)
+bool Blocks::onPos(int line, int row)
 {
-
+    bool anser = false;
+    for (int i=0;i<nrOfBox;i++)
+    {
+        if (box[i].onPos(line,row))
+        {
+            anser = true;
+        }
+    }
+    return anser;
 }
 
 void Blocks::move()

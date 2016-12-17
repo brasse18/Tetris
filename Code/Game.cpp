@@ -63,6 +63,11 @@ void Game::KeyPressed(Event event)
         std::cout << "the Space key was pressed" << std::endl;
         playfild.spanBlocks();
     }
+    if (event.key.code == sf::Keyboard::Delete)
+    {
+        std::cout << "the Delete key was pressed" << std::endl;
+        playfild.delLine(8);
+    }
 }
 
 void Game::quitGame()
