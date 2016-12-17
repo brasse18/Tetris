@@ -1,12 +1,12 @@
-#ifndef CLASS_H
+#ifndef PLAYER_H
 #include <string>
 
 using namespace std;
 
-class Class
+class Player
 {
 	private:
 	public:
-		Class();
+		Player();
 };
 #endif

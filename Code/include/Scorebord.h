@@ -1,12 +1,12 @@
-#ifndef CLASS_H
+#ifndef SCOREBORD_H
 #include <string>
 
 using namespace std;
 
-class Class
+class Scorebord
 {
 	private:
 	public:
-		Class();
+		Scorebord();
 };
 #endif

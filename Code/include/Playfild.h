@@ -2,6 +2,8 @@
 #include <string>
 #include "Blocks.h"
 #include "BlocksL.h"
+#include "BlocksT.h"
+#include "BlocksS.h"
 #include <stdlib.h>
 
 using namespace std;
@@ -19,7 +21,7 @@ class Playfild : public Drawable
         RectangleShape playfild;
 	private:
         Vector2i size = Vector2i(6,8);
-    int randBlock = rand() % 2 + 1;
+    int randBlock = rand() % 4 + 1;
         int** grid = new int*[size.x];
         int acktivBlock = 1;
         int nrOfBlocks = 4;

@@ -6,14 +6,14 @@
 #include <time.h>       /* time */
 #include <stdlib.h>
 
-
 using namespace sf;
 using namespace std;
+
 
 int main() {
     bool isFullscreen = false;
     bool quitGame = false;
-    srand (time(NULL));
+    srand(time(NULL));
     RenderWindow window(VideoMode(640,480,32),"Tetris");
 
     Game game;

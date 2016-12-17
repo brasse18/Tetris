@@ -55,7 +55,7 @@ void Playfild::spanBlocks()
         delete [] blocks;
         blocks = temp;
         nrOfBlocks = nrOfBlocks*2;
-
+        randBlock = rand() % 4 + 1;
         switch (randBlock)
         {
             case 1:
@@ -63,6 +63,12 @@ void Playfild::spanBlocks()
                 break;
             case 2:
                 blocks[acktivBlock] = Blocks();
+                break;
+            case 3:
+                blocks[acktivBlock] = BlocksT();
+                break;
+            case 4:
+                blocks[acktivBlock] = BlocksS();
                 break;
 
             default:
