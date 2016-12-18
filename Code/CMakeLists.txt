@@ -6,7 +6,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pedantic -lsfml-system -lsfm
 
 file(GLOB HEDERS include/*.h)
 
-set(BLOCKS Blocks.cpp BlocksT.cpp BlocksL.cpp BlocksS.cpp)
+set(BLOCKS Blocks.cpp BlocksT.cpp BlocksL.cpp BlocksS.cpp BlocksI.cpp)
 
 set(SOURCE_FILES main.cpp ${BLOCKS} Game.cpp Box.cpp Playfild.cpp Menu.cpp)
 

@@ -150,6 +150,33 @@ Blocks.cpp.s:
 	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/Blocks.cpp.s
 .PHONY : Blocks.cpp.s
 
+BlocksI.o: BlocksI.cpp.o
+
+.PHONY : BlocksI.o
+
+# target to build an object file
+BlocksI.cpp.o:
+	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/BlocksI.cpp.o
+.PHONY : BlocksI.cpp.o
+
+BlocksI.i: BlocksI.cpp.i
+
+.PHONY : BlocksI.i
+
+# target to preprocess a source file
+BlocksI.cpp.i:
+	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/BlocksI.cpp.i
+.PHONY : BlocksI.cpp.i
+
+BlocksI.s: BlocksI.cpp.s
+
+.PHONY : BlocksI.s
+
+# target to generate assembly for a file
+BlocksI.cpp.s:
+	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/BlocksI.cpp.s
+.PHONY : BlocksI.cpp.s
+
 BlocksL.o: BlocksL.cpp.o
 
 .PHONY : BlocksL.o
@@ -378,6 +405,9 @@ help:
 	@echo "... Blocks.o"
 	@echo "... Blocks.i"
 	@echo "... Blocks.s"
+	@echo "... BlocksI.o"
+	@echo "... BlocksI.i"
+	@echo "... BlocksI.s"
 	@echo "... BlocksL.o"
 	@echo "... BlocksL.i"
 	@echo "... BlocksL.s"

@@ -104,7 +104,7 @@ bool Playfild::fullLine()
 
 void Playfild::span()
 {
-    randBlock = rand() % 4 + 1;
+    randBlock = rand() % 5 + 1;
     switch (randBlock)
     {
         case 1:
@@ -119,8 +119,37 @@ void Playfild::span()
         case 4:
             blocks[acktivBlock] = BlocksS();
             break;
-
+        case 5:
+            blocks[acktivBlock] = BlocksI();
+            break;
         default:
             break;
     }
+}
+
+void Playfild::startMusic()
+{
+    //if (!music.openFromFile("sound/tetris.mp3"))
+    //{
+    //    cout << "error loding music" << endl;
+    //} else
+    //{
+    //    music.play();
+    //    music.setLoop(true);
+    //}
+}
+
+void Playfild::stopMusic()
+{
+    //music.stop();
+}
+
+bool Playfild::isMusicPlayeng()
+{
+    bool anser = true;
+    //if (music.getStatus() == Music::Stopped)
+    //{
+    //    anser == false;
+    //}
+    return anser;
 }

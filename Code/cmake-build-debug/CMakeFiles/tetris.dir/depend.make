@@ -6,6 +6,11 @@ CMakeFiles/tetris.dir/Blocks.cpp.o: ../SFML/Graphics.hpp
 CMakeFiles/tetris.dir/Blocks.cpp.o: ../include/Blocks.h
 CMakeFiles/tetris.dir/Blocks.cpp.o: ../include/Box.h
 
+CMakeFiles/tetris.dir/BlocksI.cpp.o: ../BlocksI.cpp
+CMakeFiles/tetris.dir/BlocksI.cpp.o: ../include/Blocks.h
+CMakeFiles/tetris.dir/BlocksI.cpp.o: ../include/BlocksI.h
+CMakeFiles/tetris.dir/BlocksI.cpp.o: ../include/Box.h
+
 CMakeFiles/tetris.dir/BlocksL.cpp.o: ../BlocksL.cpp
 CMakeFiles/tetris.dir/BlocksL.cpp.o: ../include/Blocks.h
 CMakeFiles/tetris.dir/BlocksL.cpp.o: ../include/BlocksL.h
@@ -27,6 +32,7 @@ CMakeFiles/tetris.dir/Box.cpp.o: ../include/Box.h
 
 CMakeFiles/tetris.dir/Game.cpp.o: ../Game.cpp
 CMakeFiles/tetris.dir/Game.cpp.o: ../include/Blocks.h
+CMakeFiles/tetris.dir/Game.cpp.o: ../include/BlocksI.h
 CMakeFiles/tetris.dir/Game.cpp.o: ../include/BlocksL.h
 CMakeFiles/tetris.dir/Game.cpp.o: ../include/BlocksS.h
 CMakeFiles/tetris.dir/Game.cpp.o: ../include/BlocksT.h
@@ -40,6 +46,7 @@ CMakeFiles/tetris.dir/Menu.cpp.o: ../include/Menu.h
 CMakeFiles/tetris.dir/Playfild.cpp.o: ../Playfild.cpp
 CMakeFiles/tetris.dir/Playfild.cpp.o: ../SFML/Graphics.hpp
 CMakeFiles/tetris.dir/Playfild.cpp.o: ../include/Blocks.h
+CMakeFiles/tetris.dir/Playfild.cpp.o: ../include/BlocksI.h
 CMakeFiles/tetris.dir/Playfild.cpp.o: ../include/BlocksL.h
 CMakeFiles/tetris.dir/Playfild.cpp.o: ../include/BlocksS.h
 CMakeFiles/tetris.dir/Playfild.cpp.o: ../include/BlocksT.h
@@ -47,6 +54,7 @@ CMakeFiles/tetris.dir/Playfild.cpp.o: ../include/Box.h
 CMakeFiles/tetris.dir/Playfild.cpp.o: ../include/Playfild.h
 
 CMakeFiles/tetris.dir/main.cpp.o: ../include/Blocks.h
+CMakeFiles/tetris.dir/main.cpp.o: ../include/BlocksI.h
 CMakeFiles/tetris.dir/main.cpp.o: ../include/BlocksL.h
 CMakeFiles/tetris.dir/main.cpp.o: ../include/BlocksS.h
 CMakeFiles/tetris.dir/main.cpp.o: ../include/BlocksT.h

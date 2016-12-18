@@ -85,6 +85,9 @@
 		<Unit filename="/home/brasse/projects/Tetris/Code/Blocks.cpp">
 			<Option target="tetris"/>
 		</Unit>
+		<Unit filename="/home/brasse/projects/Tetris/Code/BlocksI.cpp">
+			<Option target="tetris"/>
+		</Unit>
 		<Unit filename="/home/brasse/projects/Tetris/Code/BlocksL.cpp">
 			<Option target="tetris"/>
 		</Unit>
@@ -107,6 +110,9 @@
 			<Option target="tetris"/>
 		</Unit>
 		<Unit filename="/home/brasse/projects/Tetris/Code/include/Blocks.h">
+			<Option target="tetris"/>
+		</Unit>
+		<Unit filename="/home/brasse/projects/Tetris/Code/include/BlocksI.h">
 			<Option target="tetris"/>
 		</Unit>
 		<Unit filename="/home/brasse/projects/Tetris/Code/include/BlocksL.h">

@@ -21,6 +21,10 @@ void Game::draw(sf::RenderTarget &target, sf::RenderStates states) const
 
 void Game::gameRound()
 {
+    //if (!playfild.isMusicPlayeng())
+    //{
+    //    playfild.startMusic();
+    //}
     playfild.move();
     if (!playfild.canMove())
     {
@@ -72,6 +76,7 @@ void Game::KeyPressed(Event event)
 
 void Game::quitGame()
 {
+    //playfild.stopMusic();
     playfild.quitGame();
     playfild = Playfild();
 }
