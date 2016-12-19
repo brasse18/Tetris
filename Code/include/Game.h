@@ -16,8 +16,12 @@ class Game : public Drawable
         void gameRound();
 		void Update(Event &event,RenderWindow &window);
         void KeyPressed(Event event);
+    void startMusic();
+    void stopMusic();
+    bool isMusicPlayeng();
 	void quitGame();
 	private:
+    Music music;
 		virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
     
 };

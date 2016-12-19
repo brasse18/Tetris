@@ -1,5 +1,6 @@
 #include <iostream>
 #include "include/Game.h"
+#include <SFML/Audio.hpp>
 
 using namespace sf;
 using namespace std;
@@ -21,6 +22,10 @@ void Game::draw(sf::RenderTarget &target, sf::RenderStates states) const
 
 void Game::gameRound()
 {
+    if (!isMusicPlayeng())
+    {
+        startMusic();
+    }
     playfild.move();
     if (!playfild.canMove())
     {
@@ -68,10 +73,44 @@ void Game::KeyPressed(Event event)
         std::cout << "the Delete key was pressed" << std::endl;
         playfild.delLine(8);
     }
+    if (event.key.code == sf::Keyboard::P)
+    {
+        std::cout << "the P key was pressed" << std::endl;
+        startMusic();
+    }
+}
+
+
+void Game::startMusic()
+{
+    if (!music.openFromFile("sound/tetris.ogg"))
+    {
+        cout << "Error loading music" << endl;
+    } else {
+        music.play();
+        music.setLoop(true);
+    }
+
+}
+
+void Game::stopMusic()
+{
+    music.stop();
+}
+
+bool Game::isMusicPlayeng()
+{
+    bool anser = false;
+    if (music.getStatus() == Music::Playing)
+    {
+        anser = true;
+    }
+    return anser;
 }
 
 void Game::quitGame()
 {
+    stopMusic();
     playfild.quitGame();
     playfild = Playfild();
 }

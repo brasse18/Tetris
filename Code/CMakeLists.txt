@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.6)
 project(tetris)
 
 set(EXECUTABLE_NAME "tetris")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pedantic -lsfml-system -lsfml-window -lsfml-graphics")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pedantic -lsfml-audio -lsfml-system -lsfml-window -lsfml-graphics")
 
 file(GLOB HEDERS include/*.h)
 
