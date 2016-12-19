@@ -104,7 +104,7 @@ bool Playfild::fullLine()
 
 void Playfild::span()
 {
-    randBlock = rand() % 4 + 1;
+    randBlock = rand() % 5 + 1;
     switch (randBlock)
     {
         case 1:
@@ -119,8 +119,11 @@ void Playfild::span()
         case 4:
             blocks[acktivBlock] = BlocksS();
             break;
-
+        case 5:
+            blocks[acktivBlock] = BlocksI();
+            break;
         default:
             break;
     }
 }
+
