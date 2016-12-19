@@ -3,6 +3,7 @@
 #include <string>
 #include <SFML/Graphics.hpp>
 #include "Playfild.h"
+#include <SFML/Audio.hpp>
 
 using namespace std;
 using namespace sf;
