@@ -10,20 +10,20 @@ using namespace sf;
 
 class Game : public Drawable
 {
-	public:
-		Game();
-        int nrOfBlocks = 1;
-        Playfild playfild;
-        void gameRound();
-		void Update(Event &event,RenderWindow &window);
-        void KeyPressed(Event event);
+public:
+	Game();
+    int nrOfBlocks = 1;
+    Playfild playfild;
+    void gameRound();
+    void Update(Event &event,RenderWindow &window);
+    void KeyPressed(Event event);
     void startMusic();
     void stopMusic();
     bool isMusicPlayeng();
 	void quitGame();
-	private:
+private:
     Music music;
-		virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
     
 };
 #endif

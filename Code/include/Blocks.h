@@ -19,6 +19,7 @@ public:
     bool canMove(int nr);
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
     void rotate();
+    bool isOnPos(int x,int y);
 private:
     int nrOfBox = 4;
 protected:

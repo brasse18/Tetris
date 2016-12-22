@@ -109,3 +109,9 @@ void Blocks::rotate()
         rotateStat++;
     }
 }
+
+bool Blocks::isOnPos(int x, int y)
+{
+
+    return false;
+}

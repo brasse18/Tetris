@@ -42,6 +42,8 @@ void Playfild::move(int nr)
 
 void Playfild::spanBlocks()
 {
+
+
     acktivBlock++;
     if (acktivBlock != nrOfBlocks)
     {
