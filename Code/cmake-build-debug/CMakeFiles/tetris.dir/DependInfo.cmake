@@ -4,16 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/brasse/projects/Tetris/Code/Blocks.cpp" "/home/brasse/projects/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/Blocks.cpp.o"
-  "/home/brasse/projects/Tetris/Code/BlocksI.cpp" "/home/brasse/projects/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/BlocksI.cpp.o"
-  "/home/brasse/projects/Tetris/Code/BlocksL.cpp" "/home/brasse/projects/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/BlocksL.cpp.o"
-  "/home/brasse/projects/Tetris/Code/BlocksS.cpp" "/home/brasse/projects/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/BlocksS.cpp.o"
-  "/home/brasse/projects/Tetris/Code/BlocksT.cpp" "/home/brasse/projects/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/BlocksT.cpp.o"
-  "/home/brasse/projects/Tetris/Code/Box.cpp" "/home/brasse/projects/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/Box.cpp.o"
-  "/home/brasse/projects/Tetris/Code/Game.cpp" "/home/brasse/projects/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/Game.cpp.o"
-  "/home/brasse/projects/Tetris/Code/Menu.cpp" "/home/brasse/projects/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/Menu.cpp.o"
-  "/home/brasse/projects/Tetris/Code/Playfild.cpp" "/home/brasse/projects/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/Playfild.cpp.o"
-  "/home/brasse/projects/Tetris/Code/main.cpp" "/home/brasse/projects/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/main.cpp.o"
+  "/home/brasse/Project/Tetris/Code/Blocks.cpp" "/home/brasse/Project/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/Blocks.cpp.o"
+  "/home/brasse/Project/Tetris/Code/BlocksI.cpp" "/home/brasse/Project/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/BlocksI.cpp.o"
+  "/home/brasse/Project/Tetris/Code/BlocksL.cpp" "/home/brasse/Project/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/BlocksL.cpp.o"
+  "/home/brasse/Project/Tetris/Code/BlocksS.cpp" "/home/brasse/Project/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/BlocksS.cpp.o"
+  "/home/brasse/Project/Tetris/Code/BlocksT.cpp" "/home/brasse/Project/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/BlocksT.cpp.o"
+  "/home/brasse/Project/Tetris/Code/Box.cpp" "/home/brasse/Project/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/Box.cpp.o"
+  "/home/brasse/Project/Tetris/Code/Game.cpp" "/home/brasse/Project/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/Game.cpp.o"
+  "/home/brasse/Project/Tetris/Code/Menu.cpp" "/home/brasse/Project/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/Menu.cpp.o"
+  "/home/brasse/Project/Tetris/Code/Playfild.cpp" "/home/brasse/Project/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/Playfild.cpp.o"
+  "/home/brasse/Project/Tetris/Code/main.cpp" "/home/brasse/Project/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

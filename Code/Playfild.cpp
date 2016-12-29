@@ -43,7 +43,10 @@ void Playfild::move(int nr)
 void Playfild::spanBlocks()
 {
 
-
+if (blocks[0].onPos(0,7))
+{
+    cout << "it is on it" << endl;
+}
     acktivBlock++;
     if (acktivBlock != nrOfBlocks)
     {

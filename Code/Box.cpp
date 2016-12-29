@@ -23,7 +23,7 @@ void Box::move()
 {
     if (isDel == false) {
         if (canMove()) {
-            box.move(0, 0.08);
+            box.setPosition(box.getPosition().x, box.getPosition().y + 50);
         }
     }
 }
@@ -97,7 +97,7 @@ void Box::move(int mX, int mY)
 bool Box::onPos(int line,int row)
 {
     bool anser = false;
-    if (box.getPosition().x-5 == row*50 && box.getPosition().y == line)
+    if (box.getPosition().x-5 == line*50 && box.getPosition().y == row*50)
     {
         anser = true;
     }

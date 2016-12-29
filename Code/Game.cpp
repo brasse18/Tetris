@@ -26,11 +26,19 @@ void Game::gameRound()
     {
         startMusic();
     }
-    playfild.move();
-    if (!playfild.canMove())
+    float gameTime = clock.getElapsedTime().asSeconds();
+    if (gameTime >= 1)
     {
-        playfild.spanBlocks();
+        playfild.move();
+
+        if (!playfild.canMove())
+        {
+            playfild.spanBlocks();
+        }
+        clock.restart();
     }
+
+
 }
 
 void Game::KeyPressed(Event event)

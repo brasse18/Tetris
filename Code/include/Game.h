@@ -22,6 +22,7 @@ public:
     bool isMusicPlayeng();
 	void quitGame();
 private:
+    Clock clock;
     Music music;
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
     

@@ -11,6 +11,7 @@ using namespace std;
 
 
 int main() {
+
     bool isFullscreen = false;
     bool quitGame = false;
     srand(time(NULL));
