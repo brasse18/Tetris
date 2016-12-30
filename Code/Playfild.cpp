@@ -43,10 +43,38 @@ void Playfild::move(int nr)
 void Playfild::spanBlocks()
 {
 
-if (blocks[0].onPos(0,7))
-{
-    cout << "it is on it" << endl;
-}
+    for (int y=0;y<7;y++)
+    {
+        for (int x=0;x<5;x++)
+        {
+            map[x][y] = 0;
+        }
+        cout << endl;
+    }
+
+    for (int x=0;x<5;x++)
+    {
+        for (int y=0;y<7;y++)
+        {
+            for (int i=0;i<acktivBlock;i++)
+            {
+                if (blocks[i].onPos(x+1,y+1))
+                {
+                    map[x][y] = 1;
+                }
+            }
+        }
+    }
+
+    for (int y=0;y<7;y++)
+    {
+        for (int x=0;x<5;x++)
+        {
+            cout << map[x][y];
+        }
+        cout << endl;
+    }
+
     acktivBlock++;
     if (acktivBlock != nrOfBlocks)
     {
