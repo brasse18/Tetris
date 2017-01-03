@@ -29,12 +29,12 @@ void Game::gameRound()
     float gameTime = clock.getElapsedTime().asSeconds();
     if (gameTime >= 1)
     {
-        playfild.move();
-
-        if (!playfild.canMove())
+        playfild.updateMap();
+        if (!playfild.canMoveDown())
         {
             playfild.spanBlocks();
         }
+        playfild.moveDown();
         clock.restart();
     }
 
@@ -54,12 +54,12 @@ void Game::KeyPressed(Event event)
     if (event.key.code == sf::Keyboard::D)
     {
         std::cout << "the D key was pressed" << std::endl;
-        playfild.move(1);
+        playfild.moveToSide(moveRight);
     }
     if (event.key.code == sf::Keyboard::A)
     {
         std::cout << "the A key was pressed" << std::endl;
-        playfild.move(-1);
+        playfild.moveToSide(moveLeft);
     }
     if (event.key.code == sf::Keyboard::R)
     {
@@ -69,7 +69,7 @@ void Game::KeyPressed(Event event)
     if (event.key.code == sf::Keyboard::S)
     {
         std::cout << "the S key was pressed" << std::endl;
-        cout << playfild.canMove() << endl;
+        cout << playfild.canMoveDown() << endl;
     }
     if (event.key.code == sf::Keyboard::Space)
     {

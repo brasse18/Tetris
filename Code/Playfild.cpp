@@ -5,11 +5,6 @@
 
 Playfild::Playfild()
 {
-    for (int i=0;i<size.x;i++)
-    {
-        grid[i] = new int[size.y];
-    }
-    blocks[1] = BlocksL();
     playfild.setPosition(3,0);
     playfild.setSize(Vector2f(size.x*50,size.y*50));
     playfild.setOutlineThickness(2);
@@ -19,62 +14,35 @@ Playfild::Playfild()
 
 void Playfild::draw(sf::RenderTarget &target, sf::RenderStates states) const
 {
-    for (int i=0;i<acktivBlock;i++)
+    for (int i=0;i<=acktivBlock;i++)
     {
         target.draw(blocks[i]);
     }
     target.draw(playfild);
 }
 
-void Playfild::move()
+void Playfild::moveDown()
 {
-
-    for (int i=0;i<acktivBlock;i++)
+    if (canMoveDown())
+    {
+        blocks[acktivBlock-1].move();
+    }
+    for (int i=0;i<acktivBlock-1;i++)
     {
         blocks[i].move();
     }
 }
 
-void Playfild::move(int nr)
+void Playfild::moveToSide(int nr)
 {
-    blocks[acktivBlock-1].move(nr);
+    if (canMoveToSide(nr))
+    {
+        blocks[acktivBlock-1].move(nr);
+    }
 }
 
 void Playfild::spanBlocks()
 {
-
-    for (int y=0;y<7;y++)
-    {
-        for (int x=0;x<5;x++)
-        {
-            map[x][y] = 0;
-        }
-        cout << endl;
-    }
-
-    for (int x=0;x<5;x++)
-    {
-        for (int y=0;y<7;y++)
-        {
-            for (int i=0;i<acktivBlock;i++)
-            {
-                if (blocks[i].onPos(x+1,y+1))
-                {
-                    map[x][y] = 1;
-                }
-            }
-        }
-    }
-
-    for (int y=0;y<7;y++)
-    {
-        for (int x=0;x<5;x++)
-        {
-            cout << map[x][y];
-        }
-        cout << endl;
-    }
-
     acktivBlock++;
     if (acktivBlock != nrOfBlocks)
     {
@@ -98,8 +66,38 @@ void Playfild::rotateBlocks()
     blocks[acktivBlock-1].rotate();
 }
 
-bool Playfild::canMove() {
-    return blocks[acktivBlock-1].canMove();
+bool Playfild::canMoveDown() {
+    bool canMove = true;
+
+    if (acktivBlock == 0)
+    {
+        cout << "cant move (START)" << endl;
+        canMove = false;
+    }
+    for (int y=0;y<8;y++)
+    {
+        for (int x=0;x<6;x++)
+        {
+            if (map[x][y-1] == 1)
+            {
+                for (int i=0;i<nrOfBlocks;i++)
+                {
+                    if (blocks[i].onPos(x,y))
+                    {
+                        cout << "cant move map = 1" << endl;
+                        canMove = false;
+                    }
+                }
+            }
+        }
+    }
+    if (!blocks[acktivBlock-1].canMove())
+    {
+        cout << "aktive 2" << endl;
+        canMove = false;
+    }
+    cout << canMove << endl;
+    return canMove;
 }
 
 void Playfild::quitGame()
@@ -109,7 +107,8 @@ void Playfild::quitGame()
 
 void Playfild::delLine(int line)
 {
-    for (int i=0;i<nrOfBlocks;i++)
+    bool deadBlock = true;
+    for (int i=0;i<=acktivBlock;i++)
     {
         blocks[i].delBlox(line);
     }
@@ -137,6 +136,7 @@ bool Playfild::fullLine()
 
 void Playfild::span()
 {
+    blocks[acktivBlock-1].span();
     randBlock = rand() % 5 + 1;
     switch (randBlock)
     {
@@ -158,5 +158,82 @@ void Playfild::span()
         default:
             break;
     }
+}
+
+void Playfild::updateMap()
+{
+    bool fullLine = true;
+
+    for (int y=0;y<8;y++)
+    {
+        for (int x=0;x<6;x++)
+        {
+            map[x][y] = 0;
+        }
+    }
+
+    for (int x=0;x<6;x++)
+    {
+        for (int y=0;y<8;y++)
+        {
+            for (int i=0;i<acktivBlock;i++)
+            {
+                if (blocks[i].onPos(x,y))
+                {
+                    if (acktivBlock-1 == i)
+                    {
+                        map[x][y] = 2;
+                    } else
+                    {
+                        map[x][y] = 1;
+                    }
+                }
+            }
+        }
+    }
+    cout << endl;
+    cout << endl;
+    for (int y=0;y<8;y++)
+    {
+        for (int x=0;x<6;x++)
+        {
+            cout << map[x][y];
+        }
+        cout << endl;
+    }
+
+    for (int y=0;y<8;y++)
+    {
+        fullLine = true;
+        for (int x=0;x<6;x++)
+        {
+            if (map[x][y] == 0)
+            {
+                fullLine = false;
+            }
+        }
+        if (fullLine)
+        {
+            delLine(y);
+        }
+    }
+}
+
+bool Playfild::canMoveToSide(int nr)
+{
+    bool canMove = true;
+    for (int y=0;y<8;y++)
+    {
+        for (int x=0;x<6;x++)
+        {
+            if (map[x+nr][y] == 1)
+            if (blocks[acktivBlock-1].onPos(x,y))
+            {
+                cout << "cant mov to the side " << nr << endl;
+                canMove = false;
+            }
+        }
+    }
+    return canMove;
 }
 

@@ -28,5 +28,6 @@ public:
 	bool canMove(int nr);
 	void move(int nr);
 	void move(int x, int y);
+    bool isDead();
 };
 #endif //BOX_H

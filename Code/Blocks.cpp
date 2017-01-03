@@ -109,3 +109,24 @@ void Blocks::rotate()
         rotateStat++;
     }
 }
+
+bool Blocks::isEmty()
+{
+    bool anser = true;
+    for (int i=0;i=4;i++)
+    {
+        if (!box[i].isDead())
+        {
+            anser = false;
+        }
+    }
+    return anser;
+}
+
+void Blocks::span()
+{
+    box[0].move(-5,-5);
+    box[1].move(-5,-5);
+    box[2].move(-5,-5);
+    box[3].move(-5,-5);
+}

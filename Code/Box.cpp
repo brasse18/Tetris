@@ -97,7 +97,7 @@ void Box::move(int mX, int mY)
 bool Box::onPos(int line,int row)
 {
     bool anser = false;
-    if (box.getPosition().x-5 == line*50 && box.getPosition().y == row*50)
+    if (box.getPosition().x-5 == line*50 && box.getPosition().y == row*50 && !isDel)
     {
         anser = true;
     }
@@ -107,7 +107,7 @@ bool Box::onPos(int line,int row)
 bool Box::onLine(int line)
 {
     bool anser = false;
-    if (box.getPosition().y+50 >= line*50)
+    if (box.getPosition().y+50 >= line*50 && !isDel)
     {
         anser = true;
     }
@@ -117,4 +117,9 @@ bool Box::onLine(int line)
 void Box::del()
 {
     isDel = true;
+}
+
+bool Box::isDead()
+{
+    return isDel;
 }

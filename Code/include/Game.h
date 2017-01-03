@@ -8,6 +8,9 @@
 using namespace std;
 using namespace sf;
 
+static const int moveLeft = -1;
+static const int moveRight = 1;
+
 class Game : public Drawable
 {
 public:
