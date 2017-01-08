@@ -1,3 +1,21 @@
-#include "Class.h"
+#include "include/Scorebord.h"
 
-Class::Class(){}
+Scorebord::Scorebord()
+{
+
+}
+
+void Scorebord::addPlayer(string name)
+{
+
+}
+
+void Scorebord::save()
+{
+
+}
+
+void Scorebord::load()
+{
+
+}

@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/brasse/Project/Tetris/Code/Box.cpp" "/home/brasse/Project/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/Box.cpp.o"
   "/home/brasse/Project/Tetris/Code/Game.cpp" "/home/brasse/Project/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/Game.cpp.o"
   "/home/brasse/Project/Tetris/Code/Menu.cpp" "/home/brasse/Project/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/Menu.cpp.o"
+  "/home/brasse/Project/Tetris/Code/Player.cpp" "/home/brasse/Project/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/Player.cpp.o"
   "/home/brasse/Project/Tetris/Code/Playfild.cpp" "/home/brasse/Project/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/Playfild.cpp.o"
   "/home/brasse/Project/Tetris/Code/main.cpp" "/home/brasse/Project/Tetris/Code/cmake-build-debug/CMakeFiles/tetris.dir/main.cpp.o"
   )

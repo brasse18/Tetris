@@ -10,6 +10,12 @@ Playfild::Playfild()
     playfild.setOutlineThickness(2);
     playfild.setOutlineColor(sf::Color::Magenta);
     playfild.setFillColor(sf::Color::Transparent);
+    font.loadFromFile("font/OpenSans-Bold.ttf");
+    gameOverText.setFont (font);
+    gameOverText.setCharacterSize(11);
+    gameOverText.setString("Game Over");
+    gameOverText.setCharacterSize(55);
+    gameOverText.setPosition(300,300);
 }
 
 void Playfild::draw(sf::RenderTarget &target, sf::RenderStates states) const
@@ -19,23 +25,26 @@ void Playfild::draw(sf::RenderTarget &target, sf::RenderStates states) const
         target.draw(blocks[i]);
     }
     target.draw(playfild);
+    if (isGameOver)
+    {
+        target.draw(gameOverText);
+    }
 }
 
 void Playfild::moveDown()
 {
-    if (canMoveDown())
+    for (int i=0;i<acktivBlock;i++)
     {
-        blocks[acktivBlock-1].move();
-    }
-    for (int i=0;i<acktivBlock-1;i++)
-    {
-        blocks[i].move();
+        if (canMoveDown(i))
+        {
+            blocks[i].move();
+        }
     }
 }
 
 void Playfild::moveToSide(int nr)
 {
-    if (canMoveToSide(nr))
+    if (canMoveToSide(nr,acktivBlock-1))
     {
         blocks[acktivBlock-1].move(nr);
     }
@@ -66,7 +75,7 @@ void Playfild::rotateBlocks()
     blocks[acktivBlock-1].rotate();
 }
 
-bool Playfild::canMoveDown() {
+bool Playfild::canMoveDown(int block) {
     bool canMove = true;
 
     if (acktivBlock == 0)
@@ -78,60 +87,58 @@ bool Playfild::canMoveDown() {
     {
         for (int x=0;x<6;x++)
         {
-            if (map[x][y-1] == 1)
+            if (blocks[block].onPos(x,y-1))
             {
-                for (int i=0;i<nrOfBlocks;i++)
+                if (map[x][y] != empty && map[x][y] != block)
                 {
-                    if (blocks[i].onPos(x,y))
-                    {
-                        cout << "cant move map = 1" << endl;
-                        canMove = false;
-                    }
+                    cout << "cant move map X: " << x << " Y: " << y << " = 1" << endl;
+                    canMove = false;
                 }
             }
         }
     }
-    if (!blocks[acktivBlock-1].canMove())
+    if (!blocks[block].canMove())
     {
-        cout << "aktive 2" << endl;
         canMove = false;
     }
-    cout << canMove << endl;
+    //cout << "Block " << block << " " << canMove << endl;
     return canMove;
 }
 
 void Playfild::quitGame()
 {
     delete [] blocks;
+    isGameOver = false;
 }
 
 void Playfild::delLine(int line)
 {
     bool deadBlock = true;
-    for (int i=0;i<=acktivBlock;i++)
+    for (int i=0;i<acktivBlock;i++)
     {
         blocks[i].delBlox(line);
     }
 }
 
-bool Playfild::fullLine()
+void Playfild::fullLine()
 {
-    bool anser = false;
-    for (int i=0;i<nrOfBlocks;i++)
+    bool fullLine = true;
+    for (int y=0;y<8;y++)
     {
-        for (int row=0;row<8;row++)
+        fullLine = true;
+        for (int x=0;x<6;x++)
         {
-            for (int line=0;line<6;line++)
+            if (map[x][y] == empty)
             {
-                if (blocks[i].onPos(line,row))
-                {
-                    map[line][row] = 1;
-                }
+                fullLine = false;
             }
         }
+        if (fullLine)
+        {
+            delLine(y);
+            point();
+        }
     }
-
-    return anser;
 }
 
 void Playfild::span()
@@ -162,13 +169,11 @@ void Playfild::span()
 
 void Playfild::updateMap()
 {
-    bool fullLine = true;
-
     for (int y=0;y<8;y++)
     {
         for (int x=0;x<6;x++)
         {
-            map[x][y] = 0;
+            map[x][y] = empty;
         }
     }
 
@@ -180,54 +185,36 @@ void Playfild::updateMap()
             {
                 if (blocks[i].onPos(x,y))
                 {
-                    if (acktivBlock-1 == i)
-                    {
-                        map[x][y] = 2;
-                    } else
-                    {
-                        map[x][y] = 1;
-                    }
+                    map[x][y] = i;
                 }
             }
         }
     }
-    cout << endl;
-    cout << endl;
+
     for (int y=0;y<8;y++)
     {
         for (int x=0;x<6;x++)
         {
-            cout << map[x][y];
+            if (map[x][y] == empty)
+            {
+                cout << "X";
+            } else
+            {
+                cout << map[x][y];
+            }
         }
         cout << endl;
     }
-
-    for (int y=0;y<8;y++)
-    {
-        fullLine = true;
-        for (int x=0;x<6;x++)
-        {
-            if (map[x][y] == 0)
-            {
-                fullLine = false;
-            }
-        }
-        if (fullLine)
-        {
-            delLine(y);
-        }
-    }
 }
 
-bool Playfild::canMoveToSide(int nr)
+bool Playfild::canMoveToSide(int nr,int block)
 {
     bool canMove = true;
     for (int y=0;y<8;y++)
     {
         for (int x=0;x<6;x++)
         {
-            if (map[x+nr][y] == 1)
-            if (blocks[acktivBlock-1].onPos(x,y))
+            if (blocks[block].onPos(x+nr,y) && !map[x][y] == empty)
             {
                 cout << "cant mov to the side " << nr << endl;
                 canMove = false;
@@ -235,5 +222,61 @@ bool Playfild::canMoveToSide(int nr)
         }
     }
     return canMove;
+}
+
+void Playfild::playRound()
+{
+    if (!isGameOver)
+    {
+        if (acktivBlock == 0)
+        {
+            spanBlocks();
+        }
+        updateMap();
+        moveDown();
+        if (!canMoveDown(acktivBlock-1))
+        {
+            if (canSpan())
+            {
+                spanBlocks();
+            } else
+            {
+                gameOver();
+            }
+        }
+        fullLine();
+    }
+}
+
+void Playfild::point()
+{
+    cout << "POINT!!" << endl;
+}
+
+void Playfild::gameOver()
+{
+    for (int i=0;i<8;i++)
+    {
+        delLine(i);
+    }
+    isGameOver = true;
+    cout << "Game end" << endl;
+}
+
+bool Playfild::canSpan()
+{
+    bool anser = true;
+    for (int x=0;x<6;x++)
+    {
+        for (int i=0;i<nrOfBlocks-1;i++)
+        {
+            if (blocks[i].onPos(x,-1))
+            {
+                anser = false;
+                cout << "Cant span block " << i << " on X: " << x << " Y: -1" << endl;
+            }
+        }
+    }
+    return anser;
 }
 

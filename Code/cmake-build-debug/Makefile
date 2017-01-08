@@ -339,6 +339,33 @@ Menu.cpp.s:
 	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/Menu.cpp.s
 .PHONY : Menu.cpp.s
 
+Player.o: Player.cpp.o
+
+.PHONY : Player.o
+
+# target to build an object file
+Player.cpp.o:
+	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/Player.cpp.o
+.PHONY : Player.cpp.o
+
+Player.i: Player.cpp.i
+
+.PHONY : Player.i
+
+# target to preprocess a source file
+Player.cpp.i:
+	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/Player.cpp.i
+.PHONY : Player.cpp.i
+
+Player.s: Player.cpp.s
+
+.PHONY : Player.s
+
+# target to generate assembly for a file
+Player.cpp.s:
+	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/Player.cpp.s
+.PHONY : Player.cpp.s
+
 Playfild.o: Playfild.cpp.o
 
 .PHONY : Playfild.o
@@ -426,6 +453,9 @@ help:
 	@echo "... Menu.o"
 	@echo "... Menu.i"
 	@echo "... Menu.s"
+	@echo "... Player.o"
+	@echo "... Player.i"
+	@echo "... Player.s"
 	@echo "... Playfild.o"
 	@echo "... Playfild.i"
 	@echo "... Playfild.s"

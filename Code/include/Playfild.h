@@ -9,6 +9,8 @@
 
 using namespace std;
 
+const static int empty = -1;
+
 class Playfild : public Drawable
 {
 public:
@@ -17,15 +19,22 @@ public:
     void moveToSide(int nr);
     void spanBlocks();
     void span();
-    bool canMoveDown();
-    bool canMoveToSide(int nr);
+    bool canMoveDown(int block);
+    bool canMoveToSide(int nr,int block);
     void rotateBlocks();
-    bool fullLine();
+    void fullLine();
     void delLine(int line);
     void quitGame();
     void updateMap();
+    void playRound();
+    void point();
+    void gameOver();
+    bool canSpan();
 
 private:
+    Font font;
+    Text gameOverText;
+    bool isGameOver = false;
     int map[6][8];
     Vector2i size = Vector2i(6,8);
     int randBlock = rand() % 4 + 1;

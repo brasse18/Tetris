@@ -106,6 +106,9 @@
 		<Unit filename="/home/brasse/Project/Tetris/Code/Menu.cpp">
 			<Option target="tetris"/>
 		</Unit>
+		<Unit filename="/home/brasse/Project/Tetris/Code/Player.cpp">
+			<Option target="tetris"/>
+		</Unit>
 		<Unit filename="/home/brasse/Project/Tetris/Code/Playfild.cpp">
 			<Option target="tetris"/>
 		</Unit>
