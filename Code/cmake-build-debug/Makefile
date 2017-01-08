@@ -339,33 +339,6 @@ Menu.cpp.s:
 	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/Menu.cpp.s
 .PHONY : Menu.cpp.s
 
-Player.o: Player.cpp.o
-
-.PHONY : Player.o
-
-# target to build an object file
-Player.cpp.o:
-	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/Player.cpp.o
-.PHONY : Player.cpp.o
-
-Player.i: Player.cpp.i
-
-.PHONY : Player.i
-
-# target to preprocess a source file
-Player.cpp.i:
-	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/Player.cpp.i
-.PHONY : Player.cpp.i
-
-Player.s: Player.cpp.s
-
-.PHONY : Player.s
-
-# target to generate assembly for a file
-Player.cpp.s:
-	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/Player.cpp.s
-.PHONY : Player.cpp.s
-
 Playfild.o: Playfild.cpp.o
 
 .PHONY : Playfild.o
@@ -392,6 +365,33 @@ Playfild.s: Playfild.cpp.s
 Playfild.cpp.s:
 	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/Playfild.cpp.s
 .PHONY : Playfild.cpp.s
+
+Scorebord.o: Scorebord.cpp.o
+
+.PHONY : Scorebord.o
+
+# target to build an object file
+Scorebord.cpp.o:
+	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/Scorebord.cpp.o
+.PHONY : Scorebord.cpp.o
+
+Scorebord.i: Scorebord.cpp.i
+
+.PHONY : Scorebord.i
+
+# target to preprocess a source file
+Scorebord.cpp.i:
+	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/Scorebord.cpp.i
+.PHONY : Scorebord.cpp.i
+
+Scorebord.s: Scorebord.cpp.s
+
+.PHONY : Scorebord.s
+
+# target to generate assembly for a file
+Scorebord.cpp.s:
+	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/Scorebord.cpp.s
+.PHONY : Scorebord.cpp.s
 
 main.o: main.cpp.o
 
@@ -453,12 +453,12 @@ help:
 	@echo "... Menu.o"
 	@echo "... Menu.i"
 	@echo "... Menu.s"
-	@echo "... Player.o"
-	@echo "... Player.i"
-	@echo "... Player.s"
 	@echo "... Playfild.o"
 	@echo "... Playfild.i"
 	@echo "... Playfild.s"
+	@echo "... Scorebord.o"
+	@echo "... Scorebord.i"
+	@echo "... Scorebord.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

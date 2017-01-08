@@ -107,7 +107,7 @@ bool Box::onPos(int line,int row)
 bool Box::onLine(int line)
 {
     bool anser = false;
-    if (box.getPosition().y+50 >= line*50 && !isDel)
+    if (box.getPosition().y == line*50 && !isDel)
     {
         anser = true;
     }

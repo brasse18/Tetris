@@ -130,6 +130,10 @@ SFML/Graphics/VertexArray.hpp
 SFML/Graphics/View.hpp
 -
 
+/home/brasse/Project/Tetris/Code/Scorebord.cpp
+include/Scorebord.h
+/home/brasse/Project/Tetris/Code/include/Scorebord.h
+
 /home/brasse/Project/Tetris/Code/include/Blocks.h
 string
 -
@@ -205,7 +209,19 @@ BlocksT.h
 /home/brasse/Project/Tetris/Code/include/BlocksT.h
 BlocksS.h
 /home/brasse/Project/Tetris/Code/include/BlocksS.h
+Scorebord.h
+/home/brasse/Project/Tetris/Code/include/Scorebord.h
 stdlib.h
+-
+
+/home/brasse/Project/Tetris/Code/include/Scorebord.h
+fstream
+-
+string
+-
+iostream
+-
+sstream
 -
 
 /home/brasse/Project/Tetris/Code/main.cpp

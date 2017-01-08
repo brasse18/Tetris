@@ -10,12 +10,11 @@ using namespace sf;
 using namespace std;
 
 
-int main() {
-
+int main(int argc, char** argv) {
     bool isFullscreen = false;
     bool quitGame = false;
     srand(time(NULL));
-    RenderWindow window(VideoMode(640,480,32),"Tetris");
+    RenderWindow window(VideoMode(840,480,32),"Tetris");
 
     Game game;
     Menu menu;
@@ -25,9 +24,17 @@ int main() {
 
     Text titleText("Tetris",font,11);
     titleText.setCharacterSize(35);
-    titleText.setPosition(200,10);
+    titleText.setPosition(350,10);
 
     menu.setMenuMod(0);
+    if (argc >= 2)
+    {
+        game.playfild.setName(argv[1]);
+    } else
+    {
+        game.playfild.setName("Ananumes");
+    }
+
 
     while(window.isOpen()){
 

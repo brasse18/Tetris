@@ -5,6 +5,7 @@
 #include "BlocksL.h"
 #include "BlocksT.h"
 #include "BlocksS.h"
+#include "Scorebord.h"
 #include <stdlib.h>
 
 using namespace std;
@@ -30,9 +31,14 @@ public:
     void point();
     void gameOver();
     bool canSpan();
+    void setName(string name);
+    void save();
 
 private:
+    Scorebord scorebord;
     Font font;
+    Text score;
+    Text scorebordTest;
     Text gameOverText;
     bool isGameOver = false;
     int map[6][8];

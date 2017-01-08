@@ -191,8 +191,8 @@ void Menu::setMenuMod(int nr)
             menuMod = 0;
             break;
         case 1:
-            menuQuitGameText.setPosition(400,5);
-            menuExitText.setPosition(400,50);
+            menuQuitGameText.setPosition(400,405);
+            menuExitText.setPosition(400,450);
             menuMod = 1;
             break;
         case 2:

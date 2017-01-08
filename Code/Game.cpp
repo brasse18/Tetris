@@ -76,6 +76,11 @@ void Game::KeyPressed(Event event)
         std::cout << "the P key was pressed" << std::endl;
         startMusic();
     }
+    if (event.key.code == sf::Keyboard::S)
+    {
+        std::cout << "the S key was pressed" << std::endl;
+        playfild.save();
+    }
 }
 
 

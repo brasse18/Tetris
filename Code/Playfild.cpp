@@ -11,11 +11,23 @@ Playfild::Playfild()
     playfild.setOutlineColor(sf::Color::Magenta);
     playfild.setFillColor(sf::Color::Transparent);
     font.loadFromFile("font/OpenSans-Bold.ttf");
-    gameOverText.setFont (font);
+    gameOverText.setFont(font);
     gameOverText.setCharacterSize(11);
     gameOverText.setString("Game Over");
     gameOverText.setCharacterSize(55);
     gameOverText.setPosition(300,300);
+
+    score.setFont(font);
+    score.setCharacterSize(11);
+    score.setString("Score: 0");
+    score.setCharacterSize(35);
+    score.setPosition(350,60);
+
+    scorebordTest.setFont(font);
+    scorebordTest.setCharacterSize(11);
+    scorebordTest.setString(scorebord.allToString());
+    scorebordTest.setCharacterSize(35);
+    scorebordTest.setPosition(550,10);
 }
 
 void Playfild::draw(sf::RenderTarget &target, sf::RenderStates states) const
@@ -24,7 +36,9 @@ void Playfild::draw(sf::RenderTarget &target, sf::RenderStates states) const
     {
         target.draw(blocks[i]);
     }
+    target.draw(score);
     target.draw(playfild);
+    target.draw(scorebordTest);
     if (isGameOver)
     {
         target.draw(gameOverText);
@@ -113,7 +127,6 @@ void Playfild::quitGame()
 
 void Playfild::delLine(int line)
 {
-    bool deadBlock = true;
     for (int i=0;i<acktivBlock;i++)
     {
         blocks[i].delBlox(line);
@@ -190,7 +203,7 @@ void Playfild::updateMap()
             }
         }
     }
-
+    cout << endl;
     for (int y=0;y<8;y++)
     {
         for (int x=0;x<6;x++)
@@ -250,7 +263,9 @@ void Playfild::playRound()
 
 void Playfild::point()
 {
-    cout << "POINT!!" << endl;
+    scorebord.addPoint(tempPlayer,6);
+    score.setString("Score: " + to_string(scorebord.getPoint(tempPlayer)));
+    cout << "POINT!! " << scorebord.getPoint(tempPlayer) << endl;
 }
 
 void Playfild::gameOver()
@@ -260,6 +275,8 @@ void Playfild::gameOver()
         delLine(i);
     }
     isGameOver = true;
+    scorebord.save();
+    scorebordTest.setString(scorebord.allToString());
     cout << "Game end" << endl;
 }
 
@@ -278,5 +295,15 @@ bool Playfild::canSpan()
         }
     }
     return anser;
+}
+
+void Playfild::setName(string name)
+{
+    scorebord.setPlayer(name);
+}
+
+void Playfild::save()
+{
+    scorebord.save();
 }
 

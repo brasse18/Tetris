@@ -8,6 +8,6 @@ file(GLOB HEDERS include/*.h)
 
 set(BLOCKS Blocks.cpp BlocksT.cpp BlocksL.cpp BlocksS.cpp BlocksI.cpp)
 
-set(SOURCE_FILES main.cpp ${BLOCKS} Player.cpp Game.cpp Box.cpp Playfild.cpp Menu.cpp)
+set(SOURCE_FILES main.cpp ${BLOCKS} Scorebord.cpp Game.cpp Box.cpp Playfild.cpp Menu.cpp)
 
 add_executable(${EXECUTABLE_NAME} ${SOURCE_FILES} ${HEDERS})

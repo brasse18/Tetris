@@ -39,6 +39,7 @@ CMakeFiles/tetris.dir/Game.cpp.o: ../include/BlocksT.h
 CMakeFiles/tetris.dir/Game.cpp.o: ../include/Box.h
 CMakeFiles/tetris.dir/Game.cpp.o: ../include/Game.h
 CMakeFiles/tetris.dir/Game.cpp.o: ../include/Playfild.h
+CMakeFiles/tetris.dir/Game.cpp.o: ../include/Scorebord.h
 
 CMakeFiles/tetris.dir/Menu.cpp.o: ../Menu.cpp
 CMakeFiles/tetris.dir/Menu.cpp.o: ../include/Menu.h
@@ -52,6 +53,10 @@ CMakeFiles/tetris.dir/Playfild.cpp.o: ../include/BlocksS.h
 CMakeFiles/tetris.dir/Playfild.cpp.o: ../include/BlocksT.h
 CMakeFiles/tetris.dir/Playfild.cpp.o: ../include/Box.h
 CMakeFiles/tetris.dir/Playfild.cpp.o: ../include/Playfild.h
+CMakeFiles/tetris.dir/Playfild.cpp.o: ../include/Scorebord.h
+
+CMakeFiles/tetris.dir/Scorebord.cpp.o: ../Scorebord.cpp
+CMakeFiles/tetris.dir/Scorebord.cpp.o: ../include/Scorebord.h
 
 CMakeFiles/tetris.dir/main.cpp.o: ../include/Blocks.h
 CMakeFiles/tetris.dir/main.cpp.o: ../include/BlocksI.h
@@ -62,5 +67,6 @@ CMakeFiles/tetris.dir/main.cpp.o: ../include/Box.h
 CMakeFiles/tetris.dir/main.cpp.o: ../include/Game.h
 CMakeFiles/tetris.dir/main.cpp.o: ../include/Menu.h
 CMakeFiles/tetris.dir/main.cpp.o: ../include/Playfild.h
+CMakeFiles/tetris.dir/main.cpp.o: ../include/Scorebord.h
 CMakeFiles/tetris.dir/main.cpp.o: ../main.cpp
 
