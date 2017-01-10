@@ -204,3 +204,8 @@ void Menu::setMenuMod(int nr)
             break;
     }
 }
+
+bool Menu::getExit()
+{
+    return exit;
+}

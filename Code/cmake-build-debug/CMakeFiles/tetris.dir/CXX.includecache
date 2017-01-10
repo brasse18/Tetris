@@ -6,77 +6,77 @@
 
 #IncludeRegexTransform: 
 
-/home/brasse/Project/Tetris/Code/Blocks.cpp
+/home/brasse/projects/Tetris/Code/Blocks.cpp
 include/Blocks.h
-/home/brasse/Project/Tetris/Code/include/Blocks.h
+/home/brasse/projects/Tetris/Code/include/Blocks.h
 include/Box.h
-/home/brasse/Project/Tetris/Code/include/Box.h
+/home/brasse/projects/Tetris/Code/include/Box.h
 SFML/Graphics.hpp
-/home/brasse/Project/Tetris/Code/SFML/Graphics.hpp
+/home/brasse/projects/Tetris/Code/SFML/Graphics.hpp
 iostream
 -
 
-/home/brasse/Project/Tetris/Code/BlocksI.cpp
+/home/brasse/projects/Tetris/Code/BlocksI.cpp
 include/BlocksI.h
-/home/brasse/Project/Tetris/Code/include/BlocksI.h
+/home/brasse/projects/Tetris/Code/include/BlocksI.h
 iostream
 -
 
-/home/brasse/Project/Tetris/Code/BlocksL.cpp
+/home/brasse/projects/Tetris/Code/BlocksL.cpp
 include/BlocksL.h
-/home/brasse/Project/Tetris/Code/include/BlocksL.h
+/home/brasse/projects/Tetris/Code/include/BlocksL.h
 iostream
 -
 
-/home/brasse/Project/Tetris/Code/BlocksS.cpp
+/home/brasse/projects/Tetris/Code/BlocksS.cpp
 include/BlocksS.h
-/home/brasse/Project/Tetris/Code/include/BlocksS.h
+/home/brasse/projects/Tetris/Code/include/BlocksS.h
 iostream
 -
 
-/home/brasse/Project/Tetris/Code/BlocksT.cpp
+/home/brasse/projects/Tetris/Code/BlocksT.cpp
 include/BlocksT.h
-/home/brasse/Project/Tetris/Code/include/BlocksT.h
+/home/brasse/projects/Tetris/Code/include/BlocksT.h
 iostream
 -
 
-/home/brasse/Project/Tetris/Code/Box.cpp
+/home/brasse/projects/Tetris/Code/Box.cpp
 iostream
 -
 include/Box.h
-/home/brasse/Project/Tetris/Code/include/Box.h
+/home/brasse/projects/Tetris/Code/include/Box.h
 SFML/Graphics.hpp
-/home/brasse/Project/Tetris/Code/SFML/Graphics.hpp
+/home/brasse/projects/Tetris/Code/SFML/Graphics.hpp
 
-/home/brasse/Project/Tetris/Code/Game.cpp
+/home/brasse/projects/Tetris/Code/Game.cpp
 iostream
 -
 include/Game.h
-/home/brasse/Project/Tetris/Code/include/Game.h
+/home/brasse/projects/Tetris/Code/include/Game.h
 SFML/Audio.hpp
 -
 
-/home/brasse/Project/Tetris/Code/Menu.cpp
+/home/brasse/projects/Tetris/Code/Menu.cpp
 include/Menu.h
-/home/brasse/Project/Tetris/Code/include/Menu.h
+/home/brasse/projects/Tetris/Code/include/Menu.h
 iostream
 -
 SFML/Graphics.hpp
 -
 string
-/home/brasse/Project/Tetris/Code/string
+/home/brasse/projects/Tetris/Code/string
 
-/home/brasse/Project/Tetris/Code/Playfild.cpp
+/home/brasse/projects/Tetris/Code/Playfild.cpp
 include/Playfild.h
-/home/brasse/Project/Tetris/Code/include/Playfild.h
+/home/brasse/projects/Tetris/Code/include/Playfild.h
 SFML/Graphics.hpp
-/home/brasse/Project/Tetris/Code/SFML/Graphics.hpp
+/home/brasse/projects/Tetris/Code/SFML/Graphics.hpp
 iostream
 -
 stdlib.h
 -
 
-/home/brasse/Project/Tetris/Code/SFML/Graphics.hpp
+/home/brasse/projects/Tetris/Code/SFML/Graphics.hpp
 SFML/Window.hpp
 -
 SFML/Graphics/BlendMode.hpp
@@ -130,91 +130,91 @@ SFML/Graphics/VertexArray.hpp
 SFML/Graphics/View.hpp
 -
 
-/home/brasse/Project/Tetris/Code/Scorebord.cpp
+/home/brasse/projects/Tetris/Code/Scorebord.cpp
 include/Scorebord.h
-/home/brasse/Project/Tetris/Code/include/Scorebord.h
+/home/brasse/projects/Tetris/Code/include/Scorebord.h
 
-/home/brasse/Project/Tetris/Code/include/Blocks.h
+/home/brasse/projects/Tetris/Code/include/Blocks.h
 string
 -
 SFML/Graphics.hpp
-/home/brasse/Project/Tetris/Code/include/SFML/Graphics.hpp
+/home/brasse/projects/Tetris/Code/include/SFML/Graphics.hpp
 Box.h
-/home/brasse/Project/Tetris/Code/include/Box.h
+/home/brasse/projects/Tetris/Code/include/Box.h
 
-/home/brasse/Project/Tetris/Code/include/BlocksI.h
+/home/brasse/projects/Tetris/Code/include/BlocksI.h
 Blocks.h
-/home/brasse/Project/Tetris/Code/include/Blocks.h
+/home/brasse/projects/Tetris/Code/include/Blocks.h
 Box.h
-/home/brasse/Project/Tetris/Code/include/Box.h
+/home/brasse/projects/Tetris/Code/include/Box.h
 SFML/Graphics.hpp
 -
 
-/home/brasse/Project/Tetris/Code/include/BlocksL.h
+/home/brasse/projects/Tetris/Code/include/BlocksL.h
 Blocks.h
-/home/brasse/Project/Tetris/Code/include/Blocks.h
+/home/brasse/projects/Tetris/Code/include/Blocks.h
 Box.h
-/home/brasse/Project/Tetris/Code/include/Box.h
+/home/brasse/projects/Tetris/Code/include/Box.h
 SFML/Graphics.hpp
 -
 
-/home/brasse/Project/Tetris/Code/include/BlocksS.h
+/home/brasse/projects/Tetris/Code/include/BlocksS.h
 Blocks.h
-/home/brasse/Project/Tetris/Code/include/Blocks.h
+/home/brasse/projects/Tetris/Code/include/Blocks.h
 Box.h
-/home/brasse/Project/Tetris/Code/include/Box.h
+/home/brasse/projects/Tetris/Code/include/Box.h
 SFML/Graphics.hpp
 -
 
-/home/brasse/Project/Tetris/Code/include/BlocksT.h
+/home/brasse/projects/Tetris/Code/include/BlocksT.h
 Blocks.h
-/home/brasse/Project/Tetris/Code/include/Blocks.h
+/home/brasse/projects/Tetris/Code/include/Blocks.h
 Box.h
-/home/brasse/Project/Tetris/Code/include/Box.h
+/home/brasse/projects/Tetris/Code/include/Box.h
 SFML/Graphics.hpp
 -
 
-/home/brasse/Project/Tetris/Code/include/Box.h
+/home/brasse/projects/Tetris/Code/include/Box.h
 string
 -
 SFML/Graphics.hpp
 -
 
-/home/brasse/Project/Tetris/Code/include/Game.h
+/home/brasse/projects/Tetris/Code/include/Game.h
 string
 -
 SFML/Graphics.hpp
 -
 Playfild.h
-/home/brasse/Project/Tetris/Code/include/Playfild.h
+/home/brasse/projects/Tetris/Code/include/Playfild.h
 SFML/Audio.hpp
 -
 
-/home/brasse/Project/Tetris/Code/include/Menu.h
+/home/brasse/projects/Tetris/Code/include/Menu.h
 SFML/Graphics.hpp
 -
 string
-/home/brasse/Project/Tetris/Code/include/string
+/home/brasse/projects/Tetris/Code/include/string
 
-/home/brasse/Project/Tetris/Code/include/Playfild.h
+/home/brasse/projects/Tetris/Code/include/Playfild.h
 string
 -
 Blocks.h
-/home/brasse/Project/Tetris/Code/include/Blocks.h
+/home/brasse/projects/Tetris/Code/include/Blocks.h
 BlocksI.h
-/home/brasse/Project/Tetris/Code/include/BlocksI.h
+/home/brasse/projects/Tetris/Code/include/BlocksI.h
 BlocksL.h
-/home/brasse/Project/Tetris/Code/include/BlocksL.h
+/home/brasse/projects/Tetris/Code/include/BlocksL.h
 BlocksT.h
-/home/brasse/Project/Tetris/Code/include/BlocksT.h
+/home/brasse/projects/Tetris/Code/include/BlocksT.h
 BlocksS.h
-/home/brasse/Project/Tetris/Code/include/BlocksS.h
+/home/brasse/projects/Tetris/Code/include/BlocksS.h
 Scorebord.h
-/home/brasse/Project/Tetris/Code/include/Scorebord.h
+/home/brasse/projects/Tetris/Code/include/Scorebord.h
 stdlib.h
 -
 
-/home/brasse/Project/Tetris/Code/include/Scorebord.h
+/home/brasse/projects/Tetris/Code/include/Scorebord.h
 fstream
 -
 string
@@ -224,7 +224,7 @@ iostream
 sstream
 -
 
-/home/brasse/Project/Tetris/Code/main.cpp
+/home/brasse/projects/Tetris/Code/main.cpp
 iostream
 -
 SFML/Graphics.hpp
@@ -232,9 +232,9 @@ SFML/Graphics.hpp
 string.h
 -
 include/Game.h
-/home/brasse/Project/Tetris/Code/include/Game.h
+/home/brasse/projects/Tetris/Code/include/Game.h
 include/Menu.h
-/home/brasse/Project/Tetris/Code/include/Menu.h
+/home/brasse/projects/Tetris/Code/include/Menu.h
 time.h
 -
 stdlib.h

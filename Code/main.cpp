@@ -9,7 +9,6 @@
 using namespace sf;
 using namespace std;
 
-
 int main(int argc, char** argv) {
     bool isFullscreen = false;
     bool quitGame = false;
@@ -45,6 +44,7 @@ int main(int argc, char** argv) {
             switch (event.type) {
                 // window closed
                 case sf::Event::Closed:
+                    game.quitGame();
                     window.close();
                     break;
 
@@ -65,6 +65,12 @@ int main(int argc, char** argv) {
                 default:
                     break;
             }
+        }
+
+        if (menu.getExit())
+        {
+            game.quitGame();
+            window.close();
         }
 
         if (menu.getGameQuit())

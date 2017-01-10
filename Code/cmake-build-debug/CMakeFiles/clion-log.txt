@@ -1,4 +1,4 @@
-/opt/clion/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/brasse/Project/Tetris/Code
+/opt/clion/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/brasse/projects/Tetris/Code
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/brasse/Project/Tetris/Code/cmake-build-debug
+-- Build files have been written to: /home/brasse/projects/Tetris/Code/cmake-build-debug

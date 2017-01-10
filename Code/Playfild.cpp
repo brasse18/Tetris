@@ -28,6 +28,13 @@ Playfild::Playfild()
     scorebordTest.setString(scorebord.allToString());
     scorebordTest.setCharacterSize(35);
     scorebordTest.setPosition(550,10);
+
+    isGameOver = false;
+    size = Vector2i(6,8);
+    randBlock = rand() % 4 + 1;
+    acktivBlock = 0;
+    nrOfBlocks = 4;
+    blocks = new Blocks[nrOfBlocks];
 }
 
 void Playfild::draw(sf::RenderTarget &target, sf::RenderStates states) const

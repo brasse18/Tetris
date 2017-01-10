@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/brasse/Project/Tetris/Code/cmake-build-debug"/>
+				<Option working_dir="/home/brasse/projects/Tetris/Code/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/brasse/Project/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/brasse/Project/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/brasse/Project/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/brasse/Project/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/brasse/projects/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/brasse/projects/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/brasse/projects/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/brasse/projects/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/brasse/Project/Tetris/Code/cmake-build-debug"/>
+				<Option working_dir="/home/brasse/projects/Tetris/Code/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/brasse/Project/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/brasse/Project/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/brasse/Project/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/brasse/Project/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/brasse/projects/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/brasse/projects/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/brasse/projects/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/brasse/projects/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/brasse/Project/Tetris/Code/cmake-build-debug"/>
+				<Option working_dir="/home/brasse/projects/Tetris/Code/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/brasse/Project/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/brasse/Project/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/brasse/Project/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/brasse/Project/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/brasse/projects/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/brasse/projects/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/brasse/projects/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/brasse/projects/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="tetris">
-				<Option output="/home/brasse/Project/Tetris/Code/cmake-build-debug/tetris" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/brasse/Project/Tetris/Code/cmake-build-debug"/>
+				<Option output="/home/brasse/projects/Tetris/Code/cmake-build-debug/tetris" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/brasse/projects/Tetris/Code/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,15 +53,15 @@
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../include/c++/6.2.1/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/brasse/Project/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 tetris"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/brasse/Project/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/brasse/Project/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/brasse/Project/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/brasse/projects/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 tetris"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/brasse/projects/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/brasse/projects/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/brasse/projects/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="tetris/fast">
-				<Option output="/home/brasse/Project/Tetris/Code/cmake-build-debug/tetris" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/brasse/Project/Tetris/Code/cmake-build-debug"/>
+				<Option output="/home/brasse/projects/Tetris/Code/cmake-build-debug/tetris" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/brasse/projects/Tetris/Code/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -75,80 +75,80 @@
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../include/c++/6.2.1/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/brasse/Project/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 tetris/fast"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/brasse/Project/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/brasse/Project/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/brasse/Project/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/brasse/projects/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 tetris/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/brasse/projects/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/brasse/projects/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/brasse/projects/Tetris/Code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/brasse/Project/Tetris/Code/Blocks.cpp">
+		<Unit filename="/home/brasse/projects/Tetris/Code/Blocks.cpp">
 			<Option target="tetris"/>
 		</Unit>
-		<Unit filename="/home/brasse/Project/Tetris/Code/BlocksI.cpp">
+		<Unit filename="/home/brasse/projects/Tetris/Code/BlocksI.cpp">
 			<Option target="tetris"/>
 		</Unit>
-		<Unit filename="/home/brasse/Project/Tetris/Code/BlocksL.cpp">
+		<Unit filename="/home/brasse/projects/Tetris/Code/BlocksL.cpp">
 			<Option target="tetris"/>
 		</Unit>
-		<Unit filename="/home/brasse/Project/Tetris/Code/BlocksS.cpp">
+		<Unit filename="/home/brasse/projects/Tetris/Code/BlocksS.cpp">
 			<Option target="tetris"/>
 		</Unit>
-		<Unit filename="/home/brasse/Project/Tetris/Code/BlocksT.cpp">
+		<Unit filename="/home/brasse/projects/Tetris/Code/BlocksT.cpp">
 			<Option target="tetris"/>
 		</Unit>
-		<Unit filename="/home/brasse/Project/Tetris/Code/Box.cpp">
+		<Unit filename="/home/brasse/projects/Tetris/Code/Box.cpp">
 			<Option target="tetris"/>
 		</Unit>
-		<Unit filename="/home/brasse/Project/Tetris/Code/Game.cpp">
+		<Unit filename="/home/brasse/projects/Tetris/Code/Game.cpp">
 			<Option target="tetris"/>
 		</Unit>
-		<Unit filename="/home/brasse/Project/Tetris/Code/Menu.cpp">
+		<Unit filename="/home/brasse/projects/Tetris/Code/Menu.cpp">
 			<Option target="tetris"/>
 		</Unit>
-		<Unit filename="/home/brasse/Project/Tetris/Code/Playfild.cpp">
+		<Unit filename="/home/brasse/projects/Tetris/Code/Playfild.cpp">
 			<Option target="tetris"/>
 		</Unit>
-		<Unit filename="/home/brasse/Project/Tetris/Code/Scorebord.cpp">
+		<Unit filename="/home/brasse/projects/Tetris/Code/Scorebord.cpp">
 			<Option target="tetris"/>
 		</Unit>
-		<Unit filename="/home/brasse/Project/Tetris/Code/include/Blocks.h">
+		<Unit filename="/home/brasse/projects/Tetris/Code/include/Blocks.h">
 			<Option target="tetris"/>
 		</Unit>
-		<Unit filename="/home/brasse/Project/Tetris/Code/include/BlocksI.h">
+		<Unit filename="/home/brasse/projects/Tetris/Code/include/BlocksI.h">
 			<Option target="tetris"/>
 		</Unit>
-		<Unit filename="/home/brasse/Project/Tetris/Code/include/BlocksL.h">
+		<Unit filename="/home/brasse/projects/Tetris/Code/include/BlocksL.h">
 			<Option target="tetris"/>
 		</Unit>
-		<Unit filename="/home/brasse/Project/Tetris/Code/include/BlocksS.h">
+		<Unit filename="/home/brasse/projects/Tetris/Code/include/BlocksS.h">
 			<Option target="tetris"/>
 		</Unit>
-		<Unit filename="/home/brasse/Project/Tetris/Code/include/BlocksT.h">
+		<Unit filename="/home/brasse/projects/Tetris/Code/include/BlocksT.h">
 			<Option target="tetris"/>
 		</Unit>
-		<Unit filename="/home/brasse/Project/Tetris/Code/include/Box.h">
+		<Unit filename="/home/brasse/projects/Tetris/Code/include/Box.h">
 			<Option target="tetris"/>
 		</Unit>
-		<Unit filename="/home/brasse/Project/Tetris/Code/include/Game.h">
+		<Unit filename="/home/brasse/projects/Tetris/Code/include/Game.h">
 			<Option target="tetris"/>
 		</Unit>
-		<Unit filename="/home/brasse/Project/Tetris/Code/include/Menu.h">
+		<Unit filename="/home/brasse/projects/Tetris/Code/include/Menu.h">
 			<Option target="tetris"/>
 		</Unit>
-		<Unit filename="/home/brasse/Project/Tetris/Code/include/Player.h">
+		<Unit filename="/home/brasse/projects/Tetris/Code/include/Player.h">
 			<Option target="tetris"/>
 		</Unit>
-		<Unit filename="/home/brasse/Project/Tetris/Code/include/Playfild.h">
+		<Unit filename="/home/brasse/projects/Tetris/Code/include/Playfild.h">
 			<Option target="tetris"/>
 		</Unit>
-		<Unit filename="/home/brasse/Project/Tetris/Code/include/Scorebord.h">
+		<Unit filename="/home/brasse/projects/Tetris/Code/include/Scorebord.h">
 			<Option target="tetris"/>
 		</Unit>
-		<Unit filename="/home/brasse/Project/Tetris/Code/main.cpp">
+		<Unit filename="/home/brasse/projects/Tetris/Code/main.cpp">
 			<Option target="tetris"/>
 		</Unit>
-		<Unit filename="/home/brasse/Project/Tetris/Code/CMakeLists.txt">
+		<Unit filename="/home/brasse/projects/Tetris/Code/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

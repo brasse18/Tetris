@@ -40,13 +40,13 @@ private:
     Text score;
     Text scorebordTest;
     Text gameOverText;
-    bool isGameOver = false;
+    bool isGameOver;
     int map[6][8];
-    Vector2i size = Vector2i(6,8);
-    int randBlock = rand() % 4 + 1;
-    int acktivBlock = 0;
-    int nrOfBlocks = 4;
-	Blocks* blocks = new Blocks[nrOfBlocks];
+    Vector2i size;
+    int randBlock;
+    int acktivBlock;
+    int nrOfBlocks;
+	Blocks* blocks;
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
     RectangleShape playfild;
 
