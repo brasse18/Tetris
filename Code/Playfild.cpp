@@ -101,7 +101,7 @@ bool Playfild::canMoveDown(int block) {
 
     if (acktivBlock == 0)
     {
-        cout << "cant move (START)" << endl;
+        //cout << "cant move (START)" << endl;
         canMove = false;
     }
     for (int y=0;y<8;y++)
@@ -112,7 +112,7 @@ bool Playfild::canMoveDown(int block) {
             {
                 if (map[x][y] != empty && map[x][y] != block)
                 {
-                    cout << "cant move map X: " << x << " Y: " << y << " = 1" << endl;
+                    //cout << "cant move map X: " << x << " Y: " << y << " = 1" << endl;
                     canMove = false;
                 }
             }
@@ -210,21 +210,22 @@ void Playfild::updateMap()
             }
         }
     }
-    cout << endl;
-    for (int y=0;y<8;y++)
-    {
-        for (int x=0;x<6;x++)
-        {
-            if (map[x][y] == empty)
-            {
-                cout << "X";
-            } else
-            {
-                cout << map[x][y];
-            }
-        }
-        cout << endl;
-    }
+    // Print Mapp to console
+    //cout << endl;
+    //for (int y=0;y<8;y++)
+    //{
+    //    for (int x=0;x<6;x++)
+    //    {
+    //        if (map[x][y] == empty)
+    //        {
+    //            cout << "X";
+    //        } else
+    //        {
+    //            cout << map[x][y];
+    //        }
+    //    }
+    //    cout << endl;
+    //}
 }
 
 bool Playfild::canMoveToSide(int nr,int block)
@@ -236,7 +237,7 @@ bool Playfild::canMoveToSide(int nr,int block)
         {
             if (blocks[block].onPos(x+nr,y) && !map[x][y] == empty)
             {
-                cout << "cant mov to the side " << nr << endl;
+                //cout << "cant mov to the side " << nr << endl;
                 canMove = false;
             }
         }
@@ -272,7 +273,7 @@ void Playfild::point()
 {
     scorebord.addPoint(tempPlayer,6);
     score.setString("Score: " + to_string(scorebord.getPoint(tempPlayer)));
-    cout << "POINT!! " << scorebord.getPoint(tempPlayer) << endl;
+    //cout << "POINT!! " << scorebord.getPoint(tempPlayer) << endl;
 }
 
 void Playfild::gameOver()
@@ -284,7 +285,7 @@ void Playfild::gameOver()
     isGameOver = true;
     scorebord.save();
     scorebordTest.setString(scorebord.allToString());
-    cout << "Game end" << endl;
+    //cout << "Game end" << endl;
 }
 
 bool Playfild::canSpan()
@@ -297,7 +298,7 @@ bool Playfild::canSpan()
             if (blocks[i].onPos(x,-1))
             {
                 anser = false;
-                cout << "Cant span block " << i << " on X: " << x << " Y: -1" << endl;
+                //cout << "Cant span block " << i << " on X: " << x << " Y: -1" << endl;
             }
         }
     }
@@ -313,4 +314,3 @@ void Playfild::save()
 {
     scorebord.save();
 }
-

@@ -21,5 +21,6 @@ public:
     void save();
     void load();
     void setPlayer(string name);
+    void sortScorebord();
 };
 #endif

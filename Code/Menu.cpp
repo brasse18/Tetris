@@ -58,11 +58,6 @@ void Menu::draw(sf::RenderTarget &target, sf::RenderStates states) const
     }
 }
 
-void Menu::update(Event &event,RenderWindow &window)
-{
-
-}
-
 bool Menu::getStart()
 {
     return gameStart;
@@ -149,24 +144,6 @@ void Menu::MouseButtonPressed(Event &event, RenderWindow &window)
                 break;
                 }
             }
-        if (event.mouseButton.button == sf::Mouse::Right)
-        {
-            switch (menuMod)
-            {
-                case 0:
-
-                    break;
-                case 1:
-
-                    break;
-                case 2:
-
-                    break;
-
-                default:
-                    break;
-            }
-        }
 }
 
 bool Menu::getGameQuit()

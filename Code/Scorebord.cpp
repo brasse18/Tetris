@@ -1,4 +1,7 @@
 #include "include/Scorebord.h"
+#include <iostream>
+
+using namespace std;
 
 Scorebord::Scorebord()
 {
@@ -14,27 +17,7 @@ void Scorebord::save()
     bool bigest = false;
     int tempPoint[2];
     string tempName[2];
-
-    for (int i=0;i<3;i++)
-    {
-        if (points[i] <= points[3] && bigest == false)
-        {
-            bigest = true;
-            tempName[0] = name[i];
-            tempPoint[0] = points[i];
-            points[i] = points[3];
-            name[i] = name[3];
-            for (int e=i;e<3;e++)
-            {
-                tempName[1] = name[e];
-                tempPoint[1] = points[e];
-                points[e] = tempPoint[0];
-                name[e] = tempName[0];
-                tempPoint[0] = tempPoint[1];
-                tempName[0] = tempName[1];
-            }
-        }
-    }
+    sortScorebord();
     ofstream myfile;
     myfile.open ("save.tetris");
     string out;
@@ -74,11 +57,12 @@ void Scorebord::load()
     }
     else cout << "Unable to open file";
 
-    for (int i=0;i<3;i++)
-    {
-        cout << name[i] << endl;
-        cout << points[i] << endl;
-    }
+    // print score bord
+    //for (int i=0;i<3;i++)
+    //{
+    //    cout << name[i] << endl;
+    //    cout << points[i] << endl;
+    //}
 }
 
 string Scorebord::allToString()
@@ -105,4 +89,35 @@ void Scorebord::addPoint(int player, int point)
 void Scorebord::setPlayer(string name)
 {
     this->name[3] = name;
+}
+
+void Scorebord::sortScorebord()
+{
+    int big = 0;
+    int tempPoint;
+    string tempName;
+    for (int i=0;i<4;i++)
+    {
+        big = -1;
+        for (int e=i;e<4;e++)
+        {
+            if (big == -1)
+            {
+                big = e;
+            }
+            else if (points[e] >= points[big])
+            {
+                big = e;
+            }
+        }
+        if (big != i)
+        {
+            tempPoint = points[i];
+            tempName = name[i];
+            points[i] = points[big];
+            name[i] = name[big];
+            points[big] = tempPoint;
+            name[big] = tempName;
+        }
+    }
 }

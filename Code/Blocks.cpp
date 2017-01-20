@@ -8,6 +8,20 @@ using namespace sf;
 
 Blocks::Blocks()
 {
+    nrOfBox = 4;
+    startX = 5 + (7*50);
+    startY = 4 *50;
+
+    for (int i=0;i<4;i++)
+    {
+        for (int e=0;e<4;e++)
+        {
+            posX[i][e] = 0;
+            posY[i][e] = 0;
+        }
+    }
+    rotateStat = 0;
+
     box[0] = Box(startX,startY,sf::Color::Blue);
     box[1] = Box(startX+50,startY,sf::Color::Blue);
     box[2] = Box(startX,startY+50,sf::Color::Blue);
@@ -129,4 +143,54 @@ void Blocks::span()
     box[1].move(-5,-5);
     box[2].move(-5,-5);
     box[3].move(-5,-5);
+}
+
+int Blocks::getStartX()
+{
+    return startX;
+}
+
+int Blocks::getStartY()
+{
+    return startY;
+}
+
+void Blocks::editRotation(int *posX, int *posY)
+{
+
+}
+
+void Blocks::setRotationStat(int rotation)
+{
+    this->rotateStat = rotation;
+}
+
+int Blocks::getRotationState()
+{
+    return rotateStat;
+}
+
+int Blocks::getPosX(int line, int row)
+{
+    return posX[line][row];
+}
+
+int Blocks::getPosY(int line, int row)
+{
+    return posY[line][row];
+}
+
+void Blocks::setBox(Box box, int nr)
+{
+    this->box[nr] = box;
+}
+
+void Blocks::setPosX(int line, int row,int nr)
+{
+    posX[line][row] = nr;
+}
+
+void Blocks::setPosY(int line, int row,int nr)
+{
+    posY[line][row] = nr;
 }

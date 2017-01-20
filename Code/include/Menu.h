@@ -28,7 +28,6 @@ public:
     bool getStart();
     bool getGameQuit();
 	bool getExit();
-    void update(Event &event,RenderWindow &window);
     void MouseButtonPressed(Event &event,RenderWindow &window);
     bool isClickt(Text text,Vector2i);
 };

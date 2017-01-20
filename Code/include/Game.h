@@ -15,10 +15,9 @@ class Game : public Drawable
 {
 public:
 	Game();
-    int nrOfBlocks = 1;
+    int nrOfBlocks;
     Playfild playfild;
     void gameRound();
-    void Update(Event &event,RenderWindow &window);
     void KeyPressed(Event event);
     void startMusic();
     void stopMusic();

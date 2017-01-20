@@ -7,10 +7,10 @@
 
 BlocksS::BlocksS()
 {
-    box[0] = Box(startX,startY,sf::Color::Red);
-    box[1] = Box(startX+50,startY,sf::Color::Red);
-    box[2] = Box(startX+50,startY+50,sf::Color::Red);
-    box[3] = Box(startX+100,startY+50,sf::Color::Red);
+    setBox(Box(getStartX(),    getStartY(),     sf::Color::Red),0);
+    setBox(Box(getStartX()+50, getStartY(),     sf::Color::Red),1);
+    setBox(Box(getStartX()+50, getStartY()+50,  sf::Color::Red),2);
+    setBox(Box(getStartX()+100,getStartY()+50,  sf::Color::Red),3);
     int x[4][4] = {{ 2, 1, 0,-1},  {-2,-1, 0, 1},   { 2, 1, 0,-1},  {-2,-1, 0, 1}};
     int y[4][4] = {{-1, 0,-1, 0},  { 1, 0, 1, 0},   {-1, 0,-1, 0},  { 1, 0, 1, 0}};
 
@@ -18,8 +18,8 @@ BlocksS::BlocksS()
     {
         for (int e=0;e<4;e++)
         {
-            posX[i][e]=x[i][e];
-            posY[i][e]=y[i][e];
+            setPosX(i,e,x[i][e]);
+            setPosY(i,e,y[i][e]);
         }
     }
 }
